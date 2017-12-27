@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ThePIMS_Hospital.GUI.Doctor;
 using ThePIMS_Hospital.GUI.Patient;
 
 namespace ThePIMS_Hospital
@@ -30,6 +31,12 @@ namespace ThePIMS_Hospital
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Patient_Reg reg = new Patient_Reg();
+            reg.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Doc_Reg reg = new Doc_Reg();
             reg.ShowDialog();
         }
     }

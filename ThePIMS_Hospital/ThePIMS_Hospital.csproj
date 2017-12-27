@@ -69,6 +69,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="GUI\Doctor\Doc_All.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Doctor\Doc_Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Doctor\Doc_Reg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Patient\Patient_All.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +107,15 @@
     <Compile Include="DAL\DBEstablish.cs" />
     <Compile Include="BIZ\Doctor.cs" />
     <Compile Include="DAL\SystemDAL.cs" />
+    <Compile Include="GUI\Doctor\Doc_All.xaml.cs">
+      <DependentUpon>Doc_All.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Doctor\Doc_Edit.xaml.cs">
+      <DependentUpon>Doc_Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Doctor\Doc_Reg.xaml.cs">
+      <DependentUpon>Doc_Reg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Patient\Patient_All.xaml.cs">
       <DependentUpon>Patient_All.xaml</DependentUpon>
     </Compile>
@@ -134,6 +155,10 @@
     <Compile Include="Migrations\201712270420420_patContcatUnique.Designer.cs">
       <DependentUpon>201712270420420_patContcatUnique.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712270621327_docContact.cs" />
+    <Compile Include="Migrations\201712270621327_docContact.Designer.cs">
+      <DependentUpon>201712270621327_docContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -165,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712270420420_patContcatUnique.resx">
       <DependentUpon>201712270420420_patContcatUnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270621327_docContact.resx">
+      <DependentUpon>201712270621327_docContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

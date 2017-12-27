@@ -13,7 +13,7 @@ namespace ThePIMS_Hospital.BIZ
         public string Specialization { get; set; }
         public string Qualification { get; set; }
         public decimal Fee { get; set; }
+        public int Contact { get; set; }
 
-      
     }
 }
