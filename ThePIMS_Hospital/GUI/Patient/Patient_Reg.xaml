@@ -1,0 +1,47 @@
+﻿<Window x:Class="ThePIMS_Hospital.GUI.Patient.Patient_Reg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:ThePIMS_Hospital.GUI.Patient"
+        mc:Ignorable="d"
+        Title="Patient_Reg" Height="354.966" Width="596.794" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="261*"/>
+            <RowDefinition Height="71*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="329*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" HorizontalAlignment="Right"  Margin="0,50,0,0" Width="92">
+            <TextBlock Text="Contact :" Margin="0,10,0,0"></TextBlock>
+            <TextBlock Text="Name: " Margin="0,15,0,0"></TextBlock>
+           
+            <TextBlock Text="Email : " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="DOB: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="NIC: " Margin="0,15,0,0"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10,50,20,0" Grid.ColumnSpan="1">
+            <TextBox x:Name="txtContact" Height="23" TextWrapping="Wrap" Text="" IsEnabled="True" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtName" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            
+            <TextBox x:Name="txtEmail" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <DatePicker x:Name="dtpDate"  Height="23"  Text="" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtNIC" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Button Content="Save"  Name="btnSave" Width="100" Height="30" Margin="30,0,0,0" Click="btnSave_Click" />
+            <Button Content="Edit"  Name="btnEdit" Width="100" Height="30" Margin="30,0,0,0" Click="btnEdit_Click"/>
+            <Button Content="Delete"  Name="btnDelete" Width="100" Height="30" Margin="30,0,0,0" Click="btnDelete_Click"/>
+            <Button Content="View ALL"  Name="btnViewAkk" Width="100" Height="30" Margin="30,0,0,0" Click="btnViewAkk_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

@@ -34,10 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -61,6 +69,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="GUI\Patient\Patient_All.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Patient\Patient_Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Patient\Patient_Reg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,12 +89,52 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BIZ\Patient.cs" />
+    <Compile Include="BIZ\Patient_Channel.cs" />
+    <Compile Include="DAL\ApplicationDbContext.cs" />
+    <Compile Include="DAL\DBEstablish.cs" />
+    <Compile Include="BIZ\Doctor.cs" />
+    <Compile Include="DAL\SystemDAL.cs" />
+    <Compile Include="GUI\Patient\Patient_All.xaml.cs">
+      <DependentUpon>Patient_All.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Patient\Patient_Edit.xaml.cs">
+      <DependentUpon>Patient_Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Patient\Patient_Reg.xaml.cs">
+      <DependentUpon>Patient_Reg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201712270329346_patient.cs" />
+    <Compile Include="Migrations\201712270329346_patient.Designer.cs">
+      <DependentUpon>201712270329346_patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270333247_patientPK.cs" />
+    <Compile Include="Migrations\201712270333247_patientPK.Designer.cs">
+      <DependentUpon>201712270333247_patientPK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270341461_Docs.cs" />
+    <Compile Include="Migrations\201712270341461_Docs.Designer.cs">
+      <DependentUpon>201712270341461_Docs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270343087_DocsUpdate.cs" />
+    <Compile Include="Migrations\201712270343087_DocsUpdate.Designer.cs">
+      <DependentUpon>201712270343087_DocsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270414524_patIdentity.cs" />
+    <Compile Include="Migrations\201712270414524_patIdentity.Designer.cs">
+      <DependentUpon>201712270414524_patIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270420420_patContcatUnique.cs" />
+    <Compile Include="Migrations\201712270420420_patContcatUnique.Designer.cs">
+      <DependentUpon>201712270420420_patContcatUnique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +148,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201712270329346_patient.resx">
+      <DependentUpon>201712270329346_patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270333247_patientPK.resx">
+      <DependentUpon>201712270333247_patientPK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270341461_Docs.resx">
+      <DependentUpon>201712270341461_Docs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270343087_DocsUpdate.resx">
+      <DependentUpon>201712270343087_DocsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270414524_patIdentity.resx">
+      <DependentUpon>201712270414524_patIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270420420_patContcatUnique.resx">
+      <DependentUpon>201712270420420_patContcatUnique.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -101,5 +179,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
