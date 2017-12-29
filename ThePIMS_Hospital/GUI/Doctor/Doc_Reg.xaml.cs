@@ -25,20 +25,26 @@ namespace ThePIMS_Hospital.GUI.Doctor
         public Doc_Reg()
         {
             InitializeComponent();
+            cmbSpecilization.ItemsSource = db.Specilization.ToList();
+
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            BIZ.Doctor doctor = new BIZ.Doctor();
-            doctor.Name = txtName.Text;
-            doctor.Specialization = txtSpecilization.Text;
-            doctor.Qualification = txtQulalification.Text;
-            doctor.Fee = Convert.ToDecimal(txtFee.Text);
-            doctor.Contact = Convert.ToInt32(txtContact.Text);
+            //BIZ.Doctor doctor = new BIZ.Doctor();
+            //doctor.Name = txtName.Text;
+            //// doctor.Specialization = txtSpecilization.Text;
+            //doctor.Specilization.ID = Convert.ToInt32(cmbSpecilization.SelectedValue);
+            //doctor.Qualification = txtQulalification.Text;
+            //doctor.Fee = Convert.ToDecimal(txtFee.Text);
+            //doctor.Contact = Convert.ToInt32(txtContact.Text);
 
-            db.Doctor.Add(doctor);
-            var res= db.SaveChanges();
-            if (res == 1)
+            //db.Doctor.Add(doctor);
+            //var res= db.SaveChanges();
+            string query = "addDoc '" + txtName.Text + "','" + txtQulalification.Text + "','" + txtContact.Text + "','" +  txtFee.Text + "','" + cmbSpecilization.SelectedValue + "'";
+            bool res = new SystemDAL().executeNonQuerys(query);
+
+            if (res == true)
             {
                 MessageBox.Show("Success");
             }

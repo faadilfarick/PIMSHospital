@@ -17,6 +17,7 @@ namespace ThePIMS_Hospital.DAL
         public DbSet<Patient> Patient { get; set; }
         public DbSet<Patient_Channel> PatientChannel { get; set; }
         public DbSet<Doctor> Doctor { get; set; }
+        public DbSet<Specilization> Specilization { get; set; }
 
     }
 }

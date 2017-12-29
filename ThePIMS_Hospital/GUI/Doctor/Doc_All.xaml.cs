@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,18 @@ namespace ThePIMS_Hospital.GUI.Doctor
         public Doc_All()
         {
             InitializeComponent();
+            var doc = from d in db.Doctor
+                      join s in db.Specilization on d.Specilization.ID equals s.ID
+                      select new { d.ID, d.Name, d.Qualification, d.Fee,d.Specilization };
+            //foreach (var docs in doc)
+            //    MessageBox.Show(docs.Specilization.Name);
+
+
             dgvDocs.ItemsSource = db.Doctor.ToList();
+            //dgvDocs.ItemsSource = from d in db.Doctor
+            //                      join s in db.Specilization on d.Specilization.ID equals s.ID
+            //                      select new { d.ID,d.Name,d.Qualification,d.Fee,d.Specilization };
+
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)

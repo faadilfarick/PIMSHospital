@@ -30,7 +30,7 @@
             <TextBox x:Name="txtID" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
             <TextBox x:Name="txtName" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
 
-            <TextBox x:Name="txtSpecilization" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <ComboBox x:Name="cmbSpecilization" DisplayMemberPath="Name" SelectedValuePath="ID"  Margin="0,5,10,0"/>
             <TextBox x:Name="txtQulalification" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
             <TextBox x:Name="txtFee" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
             <TextBox x:Name="txtContact" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>

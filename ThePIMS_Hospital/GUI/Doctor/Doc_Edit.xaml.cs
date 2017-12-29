@@ -25,6 +25,7 @@ namespace ThePIMS_Hospital.GUI.Doctor
         public Doc_Edit()
         {
             InitializeComponent();
+            cmbSpecilization.ItemsSource = db.Specilization.ToList();
         }
 
         private void btnFind_Click(object sender, RoutedEventArgs e)
@@ -35,7 +36,8 @@ namespace ThePIMS_Hospital.GUI.Doctor
             {
                 txtID.Text = doc.ID.ToString();
                 txtName.Text = doc.Name;
-                txtSpecilization.Text = doc.Specialization;
+                cmbSpecilization.SelectedValue = doc.Specilization.ID;
+                //txtSpecilization.Text = doc.Specialization;
                 txtQulalification.Text = doc.Qualification;
                 txtFee.Text = doc.Fee.ToString();
                 txtContact.Text = doc.Contact.ToString();
@@ -59,20 +61,23 @@ namespace ThePIMS_Hospital.GUI.Doctor
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             int docID = Convert.ToInt32(txtID.Text);
-            BIZ.Doctor doctor = db.Doctor.Where(d => d.ID == docID).FirstOrDefault();
-            doctor.ID = docID;
-            doctor.Name = txtName.Text;
-            doctor.Specialization = txtSpecilization.Text;
-            doctor.Qualification = txtQulalification.Text;
-            doctor.Fee = Convert.ToDecimal(txtFee.Text);
-            doctor.Contact = Convert.ToInt32(txtContact.Text);
+            // BIZ.Doctor doctor = db.Doctor.Where(d => d.ID == docID).FirstOrDefault();
+            // doctor.ID = docID;
+            // doctor.Name = txtName.Text;
+            //// doctor.Specialization = txtSpecilization.Text;
+            // doctor.Qualification = txtQulalification.Text;
+            // doctor.Fee = Convert.ToDecimal(txtFee.Text);
+            // doctor.Contact = Convert.ToInt32(txtContact.Text);
 
-            db.Doctor.Attach(doctor);
-            var entry = db.Entry(doctor);
-            entry.State = System.Data.Entity.EntityState.Modified;
-            var res = db.SaveChanges();
+            // db.Doctor.Attach(doctor);
+            // var entry = db.Entry(doctor);
+            // entry.State = System.Data.Entity.EntityState.Modified;
+            // var res = db.SaveChanges();
 
-            if (res == 1)
+            string query = "updateDoc '" + docID + "', '" + txtName.Text + "','" + txtQulalification.Text + "','" + txtContact.Text + "','" + txtFee.Text + "','" + cmbSpecilization.SelectedValue + "'";
+            bool res = new SystemDAL().executeNonQuerys(query);
+
+            if (res == true)
             {
                 MessageBox.Show("Success");
             }

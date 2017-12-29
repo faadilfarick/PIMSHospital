@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="BIZ\Patient.cs" />
     <Compile Include="BIZ\Patient_Channel.cs" />
+    <Compile Include="BIZ\Specilizations.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\DBEstablish.cs" />
     <Compile Include="BIZ\Doctor.cs" />
@@ -159,6 +160,18 @@
     <Compile Include="Migrations\201712270621327_docContact.Designer.cs">
       <DependentUpon>201712270621327_docContact.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712270830233_speclilization.cs" />
+    <Compile Include="Migrations\201712270830233_speclilization.Designer.cs">
+      <DependentUpon>201712270830233_speclilization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270836335_speclilizationDoc.cs" />
+    <Compile Include="Migrations\201712270836335_speclilizationDoc.Designer.cs">
+      <DependentUpon>201712270836335_speclilizationDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270902217_speclilizationDocS.cs" />
+    <Compile Include="Migrations\201712270902217_speclilizationDocS.Designer.cs">
+      <DependentUpon>201712270902217_speclilizationDocS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -193,6 +206,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712270621327_docContact.resx">
       <DependentUpon>201712270621327_docContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270830233_speclilization.resx">
+      <DependentUpon>201712270830233_speclilization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270836335_speclilizationDoc.resx">
+      <DependentUpon>201712270836335_speclilizationDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270902217_speclilizationDocS.resx">
+      <DependentUpon>201712270902217_speclilizationDocS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
