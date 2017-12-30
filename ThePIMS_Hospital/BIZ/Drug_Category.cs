@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ThePIMS_Hospital.BIZ
 {
-    class Cashier
+    class Drug_Category
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public int Contact { get; set; }
+        public string  Name { get; set; }
+        public string Discription { get; set; }
+
+        public virtual IEnumerable<Drug_Inventory> Drug_Inventory { get; set; }
     }
 }

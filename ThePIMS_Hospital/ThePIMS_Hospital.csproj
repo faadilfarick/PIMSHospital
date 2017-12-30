@@ -89,6 +89,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\Drug\Drug_Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Drug\Drug_Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Patient\Patient_All.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,16 +117,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BIZ\Cashier.cs" />
-    <Compile Include="BIZ\Dispenser.cs" />
+    <Compile Include="BIZ\Drug_Category.cs" />
     <Compile Include="BIZ\Drug_Inventory.cs" />
-    <Compile Include="BIZ\ITManager.cs" />
-    <Compile Include="BIZ\MedicalSuperintendent.cs" />
     <Compile Include="BIZ\Patient.cs" />
     <Compile Include="BIZ\Patient_Channel.cs" />
     <Compile Include="BIZ\Patient_Feedback.cs" />
     <Compile Include="BIZ\Payment.cs" />
-    <Compile Include="BIZ\Pharmacist.cs" />
     <Compile Include="BIZ\Prescription.cs" />
     <Compile Include="BIZ\Specilizations.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
@@ -139,6 +143,12 @@
     </Compile>
     <Compile Include="GUI\Doctor\Doc_Reg.xaml.cs">
       <DependentUpon>Doc_Reg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Drug\Drug_Add.xaml.cs">
+      <DependentUpon>Drug_Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Drug\Drug_Edit.xaml.cs">
+      <DependentUpon>Drug_Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\Patient\Patient_All.xaml.cs">
       <DependentUpon>Patient_All.xaml</DependentUpon>
@@ -199,6 +209,18 @@
     <Compile Include="Migrations\201712300254598_DatatypechangeChennel.Designer.cs">
       <DependentUpon>201712300254598_DatatypechangeChennel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712300408314_drugInventryandCategory.cs" />
+    <Compile Include="Migrations\201712300408314_drugInventryandCategory.Designer.cs">
+      <DependentUpon>201712300408314_drugInventryandCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712300414230_addnameInventry.cs" />
+    <Compile Include="Migrations\201712300414230_addnameInventry.Designer.cs">
+      <DependentUpon>201712300414230_addnameInventry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712300428245_addQtyAviDrugInv.cs" />
+    <Compile Include="Migrations\201712300428245_addQtyAviDrugInv.Designer.cs">
+      <DependentUpon>201712300428245_addQtyAviDrugInv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -245,6 +267,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712300254598_DatatypechangeChennel.resx">
       <DependentUpon>201712300254598_DatatypechangeChennel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712300408314_drugInventryandCategory.resx">
+      <DependentUpon>201712300408314_drugInventryandCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712300414230_addnameInventry.resx">
+      <DependentUpon>201712300414230_addnameInventry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712300428245_addQtyAviDrugInv.resx">
+      <DependentUpon>201712300428245_addQtyAviDrugInv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

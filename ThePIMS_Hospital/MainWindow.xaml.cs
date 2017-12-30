@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ThePIMS_Hospital.GUI.Channel_DOC;
 using ThePIMS_Hospital.GUI.Doctor;
+using ThePIMS_Hospital.GUI.Drug;
 using ThePIMS_Hospital.GUI.Patient;
 
 namespace ThePIMS_Hospital
@@ -45,6 +46,12 @@ namespace ThePIMS_Hospital
         {
             Channel_Doc page = new Channel_Doc();
             page.ShowDialog();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Drug_Add drug_Add = new Drug_Add();
+            drug_Add.ShowDialog();
         }
     }
 }
