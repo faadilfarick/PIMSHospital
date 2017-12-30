@@ -103,22 +103,30 @@ update [dbo].[Drug_Inventory] set [Description]=@disc,[Unit_Selling_Price]=@unit
 [Drug_Type]=@drugType,[Shelf]=@shelf,[Name]=@Name where [ID]=@DrugID
 end
 
-//Adding Prescriptions
-create proc addPresc
-(
-@deseasetype nvarchar(max),
-@description nvarchar(max),
-@patient int,
-@doctor int,
-@prescdesc int
 
+
+select * from [dbo].[Patient_Channel] where [Patient_Contact]=0776005535
+
+
+
+
+go
+create proc cancelAppoinment
+(
+@id int
 )
 as
 begin
-insert into [dbo].[Prescriptions]([Deseas_Type],[Description],[Patient_ID],[Doctor_ID],[Prescription_Details_ID]) 
-values (@deseasetype,@description,@patient,@doctor,@prescdesc)
+
+INSERT INTO [dbo].[Patient_Channel_Cancel] ([ChannelDate],[ChannelTime],[Fee],[RoomNumber],[ChannelNumber],[Patient_ID],[Patient_Contact],[Doctor_ID])
+SELECT [ChannelDate],[ChannelTime],[Fee],[RoomNumber],[ChannelNumber],[Patient_ID],[Patient_Contact],[Doctor_ID]
+FROM [dbo].[Patient_Channel]
+WHERE [ID]=@id;
+
+DELETE FROM [dbo].[Patient_Channel]
+WHERE [ID]=@id;
+
 end
 
-go
 
 
