@@ -10,6 +10,7 @@
     <Grid>
         <Button Content="Patient" HorizontalAlignment="Left" Margin="166,107,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button Content="DOC" HorizontalAlignment="Left" Margin="312,107,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Channel" HorizontalAlignment="Left" Margin="166,171,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
 
     </Grid>
 </Controls:MetroWindow>

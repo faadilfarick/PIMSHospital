@@ -69,6 +69,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="GUI\Channel_DOC\AppoinmnetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Channel_DOC\Channel_Doc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Doctor\Doc_All.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -108,6 +116,12 @@
     <Compile Include="DAL\DBEstablish.cs" />
     <Compile Include="BIZ\Doctor.cs" />
     <Compile Include="DAL\SystemDAL.cs" />
+    <Compile Include="GUI\Channel_DOC\AppoinmnetPage.xaml.cs">
+      <DependentUpon>AppoinmnetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Channel_DOC\Channel_Doc.xaml.cs">
+      <DependentUpon>Channel_Doc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Doctor\Doc_All.xaml.cs">
       <DependentUpon>Doc_All.xaml</DependentUpon>
     </Compile>
@@ -172,6 +186,10 @@
     <Compile Include="Migrations\201712270902217_speclilizationDocS.Designer.cs">
       <DependentUpon>201712270902217_speclilizationDocS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712300254598_DatatypechangeChennel.cs" />
+    <Compile Include="Migrations\201712300254598_DatatypechangeChennel.Designer.cs">
+      <DependentUpon>201712300254598_DatatypechangeChennel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -215,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712270902217_speclilizationDocS.resx">
       <DependentUpon>201712270902217_speclilizationDocS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712300254598_DatatypechangeChennel.resx">
+      <DependentUpon>201712300254598_DatatypechangeChennel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
