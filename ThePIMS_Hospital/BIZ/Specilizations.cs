@@ -13,5 +13,6 @@ namespace ThePIMS_Hospital.BIZ
         public string Discription { get; set; }
 
         public virtual IEnumerable<Doctor> Doctor { get; set; }
+
     }
 }
