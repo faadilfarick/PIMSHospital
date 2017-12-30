@@ -121,6 +121,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\Prescription\Presc_Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Prescription\Presc_All.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Prescription\Pres_Edit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -181,6 +193,15 @@
     </Compile>
     <Compile Include="GUI\Patient\Patient_Reg.xaml.cs">
       <DependentUpon>Patient_Reg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Prescription\Presc_Add.xaml.cs">
+      <DependentUpon>Presc_Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Prescription\Presc_All.xaml.cs">
+      <DependentUpon>Presc_All.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Prescription\Pres_Edit.xaml.cs">
+      <DependentUpon>Pres_Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -268,6 +289,10 @@
     <Compile Include="Migrations\201712300946308_cancelChannelingnew12.Designer.cs">
       <DependentUpon>201712300946308_cancelChannelingnew12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712301221205_iyvuyv.cs" />
+    <Compile Include="Migrations\201712301221205_iyvuyv.Designer.cs">
+      <DependentUpon>201712301221205_iyvuyv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -341,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712300946308_cancelChannelingnew12.resx">
       <DependentUpon>201712300946308_cancelChannelingnew12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712301221205_iyvuyv.resx">
+      <DependentUpon>201712301221205_iyvuyv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
