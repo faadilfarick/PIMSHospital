@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThePIMS_Hospital.GUI.Prescription"
         mc:Ignorable="d"
-        Title="Presc_Add" Height="300" Width="300">
+        Title="Presc_Add" Height="354.966" Width="596.794" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="261*"/>
+            <RowDefinition Height="71*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="329*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" HorizontalAlignment="Right"  Margin="0,50,0,0" Width="92">
+            <TextBlock Text="Patient ID: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Doctor ID: " Margin="0,15,0,0"></TextBlock>
+
+            <TextBlock Text="Date: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Desease Type: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Description: " Margin="0,15,0,0"></TextBlock>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10,50,20,0" Grid.ColumnSpan="1">
+            <TextBox x:Name="txtPID" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtDID" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+
+            <TextBox x:Name="txtDate" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtDeseaseType" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtDescription" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Button Content="Save"  Name="btnSave" Width="100" Height="30" Margin="30,0,0,0" Click="btnSave_Click" />
+            <Button Content="Edit"  Name="btnEdit" Width="100" Height="30" Margin="30,0,0,0" Click="btnEdit_Click"/>
+            <Button Content="Delete"  Name="btnDelete" Width="100" Height="30" Margin="30,0,0,0" Click="btnDelete_Click"/>
+            <Button Content="View ALL"  Name="btnViewAkk" Width="100" Height="30" Margin="30,0,0,0" Click="btnViewAkk_Click"/>
+
+        </StackPanel>
     </Grid>
 </Window>

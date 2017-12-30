@@ -123,7 +123,6 @@
     </Compile>
     <Compile Include="BIZ\Cashier.cs" />
     <Compile Include="BIZ\Dispenser.cs" />
-    <Compile Include="BIZ\Drug_Inventory.cs" />
     <Compile Include="BIZ\ITManager.cs" />
     <Compile Include="BIZ\MedicalSuperintendent.cs" />
     <Compile Include="BIZ\Patient.cs" />
