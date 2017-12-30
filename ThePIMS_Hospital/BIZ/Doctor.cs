@@ -9,8 +9,7 @@ namespace ThePIMS_Hospital.BIZ
     class Doctor
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        
+        public string Name { get; set; }        
         public string Qualification { get; set; }
         public decimal Fee { get; set; }
         public int Contact { get; set; }

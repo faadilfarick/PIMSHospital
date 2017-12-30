@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThePIMS_Hospital.GUI.Channel_DOC"
         mc:Ignorable="d"
-        Title="Channel_Doc" Height="600" Width="800">
+        Title="Channel_Doc" Height="600" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="213*"/>
