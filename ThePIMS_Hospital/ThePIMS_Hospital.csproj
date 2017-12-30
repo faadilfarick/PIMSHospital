@@ -101,8 +101,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BIZ\Cashier.cs" />
+    <Compile Include="BIZ\Dispenser.cs" />
+    <Compile Include="BIZ\Drug_Inventory.cs" />
+    <Compile Include="BIZ\ITManager.cs" />
+    <Compile Include="BIZ\MedicalSuperintendent.cs" />
     <Compile Include="BIZ\Patient.cs" />
     <Compile Include="BIZ\Patient_Channel.cs" />
+    <Compile Include="BIZ\Patient_Feedback.cs" />
+    <Compile Include="BIZ\Payment.cs" />
+    <Compile Include="BIZ\Pharmacist.cs" />
+    <Compile Include="BIZ\Prescription.cs" />
     <Compile Include="BIZ\Specilizations.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\DBEstablish.cs" />
