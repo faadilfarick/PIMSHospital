@@ -10,8 +10,8 @@ namespace ThePIMS_Hospital.BIZ
     class Patient_Channel
     {
         public int ID { get; set; }
-        public string ChannelDate { get; set; }
-        public string ChannelTime { get; set; }
+        public DateTime ChannelDate { get; set; }
+        public DateTime ChannelTime { get; set; }
         public decimal Fee { get; set; }
         public int RoomNumber { get; set; }
         public int ChannelNumber { get; set; }

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ThePIMS_Hospital.GUI.Channel_DOC;
 using ThePIMS_Hospital.GUI.Doctor;
 using ThePIMS_Hospital.GUI.Patient;
 
@@ -38,6 +39,12 @@ namespace ThePIMS_Hospital
         {
             Doc_Reg reg = new Doc_Reg();
             reg.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Channel_Doc page = new Channel_Doc();
+            page.ShowDialog();
         }
     }
 }

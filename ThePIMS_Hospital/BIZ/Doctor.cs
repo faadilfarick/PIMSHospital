@@ -14,7 +14,10 @@ namespace ThePIMS_Hospital.BIZ
         public string Qualification { get; set; }
         public decimal Fee { get; set; }
         public int Contact { get; set; }
+        
         public virtual Specilization Specilization { get; set; }
+
+
 
     }
 }
