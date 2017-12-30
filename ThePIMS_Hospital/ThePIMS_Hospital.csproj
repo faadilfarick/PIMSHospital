@@ -124,6 +124,7 @@
     <Compile Include="BIZ\Patient_Feedback.cs" />
     <Compile Include="BIZ\Payment.cs" />
     <Compile Include="BIZ\Prescription.cs" />
+    <Compile Include="BIZ\Prescription_details.cs" />
     <Compile Include="BIZ\Specilizations.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\DBEstablish.cs" />
@@ -221,6 +222,10 @@
     <Compile Include="Migrations\201712300428245_addQtyAviDrugInv.Designer.cs">
       <DependentUpon>201712300428245_addQtyAviDrugInv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712300549257_prescriptionAndDetails.cs" />
+    <Compile Include="Migrations\201712300549257_prescriptionAndDetails.Designer.cs">
+      <DependentUpon>201712300549257_prescriptionAndDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -276,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712300428245_addQtyAviDrugInv.resx">
       <DependentUpon>201712300428245_addQtyAviDrugInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712300549257_prescriptionAndDetails.resx">
+      <DependentUpon>201712300549257_prescriptionAndDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
