@@ -43,8 +43,13 @@ namespace ThePIMS_Hospital.GUI.Drug
                 MessageBox.Show("Drug Added");
                 dgvProductList.ItemsSource = db.Drug_Inventory.ToList();
             }
+            else
+            {
+                MessageBox.Show("Something is not right please try again");
+            }
 
         }
+        int id = 0;
 
         private void dgvProductList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -59,7 +64,7 @@ namespace ThePIMS_Hospital.GUI.Drug
                         if (row != null)
                         {
 
-                            int id = row.ID;
+                             id = row.ID;
                             
                             txtName.Text = row.Name;
                             txtDiscription.Text = row.Description;
@@ -86,7 +91,35 @@ namespace ThePIMS_Hospital.GUI.Drug
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
+            if (id != 0)
+            {
+                Drug_Edit _Edit = new Drug_Edit(id);
+                _Edit.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Select a drug from Datagrid to edit");
+            }
+         
+        }
 
+        private void clear()
+        {
+            txtName.Text = "";
+            txtDiscription.Text = "";
+            
+            txtSellingPrice.Text = "";
+            txtReorder.Text = "";
+            txtbuyingPrice.Text = "";
+            txtType.Text = "";
+            txtShelf.Text = "";
+            id = 0;
+            cmbCategory.SelectedIndex = -1;
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            clear();
         }
     }
 }

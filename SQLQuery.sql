@@ -81,5 +81,26 @@ values(@Name,@disc,@unitSellingPrice,@reorder,@unitBuyingPri,@drugType,@shelf,@c
 end
 
 
+go
+
+
+create proc updateDrugInventry
+(
+@Name nvarchar(max),
+@disc nvarchar(max),
+@unitSellingPrice decimal(18,2),
+@reorder int,
+@unitBuyingPri decimal(18,2),
+@drugType nvarchar(max),
+@shelf nvarchar(max),
+@category int,
+@DrugID int
+)
+as 
+begin
+
+update [dbo].[Drug_Inventory] set [Description]=@disc,[Unit_Selling_Price]=@unitSellingPrice,[Reorder_Level]=@reorder,[Unit_Buying_Price]=@unitBuyingPri,
+[Drug_Type]=@drugType,[Shelf]=@shelf,[Name]=@Name where [ID]=@DrugID
+end
 
 
