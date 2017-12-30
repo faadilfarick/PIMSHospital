@@ -109,6 +109,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\Prescription\Presc_Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Prescription\Presc_All.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Prescription\Pres_Edit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -159,6 +171,15 @@
     </Compile>
     <Compile Include="GUI\Patient\Patient_Reg.xaml.cs">
       <DependentUpon>Patient_Reg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Prescription\Presc_Add.xaml.cs">
+      <DependentUpon>Presc_Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Prescription\Presc_All.xaml.cs">
+      <DependentUpon>Presc_All.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Prescription\Pres_Edit.xaml.cs">
+      <DependentUpon>Pres_Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -226,6 +247,10 @@
     <Compile Include="Migrations\201712300549257_prescriptionAndDetails.Designer.cs">
       <DependentUpon>201712300549257_prescriptionAndDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712300856293_jnjn.cs" />
+    <Compile Include="Migrations\201712300856293_jnjn.Designer.cs">
+      <DependentUpon>201712300856293_jnjn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -284,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712300549257_prescriptionAndDetails.resx">
       <DependentUpon>201712300549257_prescriptionAndDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712300856293_jnjn.resx">
+      <DependentUpon>201712300856293_jnjn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

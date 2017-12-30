@@ -103,4 +103,22 @@ update [dbo].[Drug_Inventory] set [Description]=@disc,[Unit_Selling_Price]=@unit
 [Drug_Type]=@drugType,[Shelf]=@shelf,[Name]=@Name where [ID]=@DrugID
 end
 
+//Adding Prescriptions
+create proc addPresc
+(
+@deseasetype nvarchar(max),
+@description nvarchar(max),
+@patient int,
+@doctor int,
+@prescdesc int
+
+)
+as
+begin
+insert into [dbo].[Prescriptions]([Deseas_Type],[Description],[Patient_ID],[Doctor_ID],[Prescription_Details_ID]) 
+values (@deseasetype,@description,@patient,@doctor,@prescdesc)
+end
+
+go
+
 

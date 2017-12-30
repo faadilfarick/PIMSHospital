@@ -18,21 +18,22 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" HorizontalAlignment="Right"  Margin="0,50,0,0" Width="92">
-            <TextBlock Text="Patient ID: " Margin="0,15,0,0"></TextBlock>
-            <TextBlock Text="Doctor ID: " Margin="0,15,0,0"></TextBlock>
-
-            <TextBlock Text="Date: " Margin="0,15,0,0"></TextBlock>
             <TextBlock Text="Desease Type: " Margin="0,15,0,0"></TextBlock>
             <TextBlock Text="Description: " Margin="0,15,0,0"></TextBlock>
 
+            <TextBlock Text="Patient : " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Doctor : " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Presc. Details : " Margin="0,15,0,0"></TextBlock>
+
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10,50,20,0" Grid.ColumnSpan="1">
-            <TextBox x:Name="txtPID" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
-            <TextBox x:Name="txtDID" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
 
-            <TextBox x:Name="txtDate" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
             <TextBox x:Name="txtDeseaseType" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
             <TextBox x:Name="txtDescription" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+
+            <ComboBox x:Name="cmbPatient" DisplayMemberPath="Name" SelectedValuePath="ID"  Margin="0,5,10,0"/>
+            <ComboBox x:Name="cmbDoctor" DisplayMemberPath="Name" SelectedValuePath="ID"  Margin="0,5,10,0"/>
+            <ComboBox x:Name="cmbPrescDetails" DisplayMemberPath="Name" SelectedValuePath="ID"  Margin="0,5,10,0"/>
 
 
         </StackPanel>

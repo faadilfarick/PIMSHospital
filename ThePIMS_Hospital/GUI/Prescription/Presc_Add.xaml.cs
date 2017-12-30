@@ -29,7 +29,8 @@ namespace ThePIMS_Hospital.GUI.Prescription
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            string query = "addDoc '" + txtName.Text + "','" + txtQulalification.Text + "','" + txtContact.Text + "','" + txtFee.Text + "','" + cmbSpecilization.SelectedValue + "'";
+            string query = "addPresc '" + txtDescription.Text + "','" + txtDeseaseType.Text + "','" + txtDescription.Text + "','" + 
+                cmbPatient.SelectedValue + "','" + cmbDoctor.SelectedValue + "','" + cmbPrescDetails.SelectedValue +  "'";
             bool res = new SystemDAL().executeNonQuerys(query);
 
             if (res == true)
