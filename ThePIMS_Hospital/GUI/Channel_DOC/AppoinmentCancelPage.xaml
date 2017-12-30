@@ -1,0 +1,26 @@
+﻿<Page x:Class="ThePIMS_Hospital.GUI.Channel_DOC.AppoinmentCancelPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ThePIMS_Hospital.GUI.Channel_DOC"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="AppoinmentCancelPage" Height="447.665" Width="671.053">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="262*"/>
+            <RowDefinition Height="123*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <DataGrid Name="dgvAppoinmnets" Margin="0,10,0,0" MaxHeight="150" IsReadOnly="True" SelectionChanged="dgvProductList_SelectionChanged"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Content="Cancel Appoinment"  Name="btnCancel" Width="143" Margin="30,38,0,28" Click="btnCancel_Click"   />
+
+        </StackPanel>
+
+    </Grid>
+</Page>

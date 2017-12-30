@@ -28,9 +28,12 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
             InitializeComponent();
             cmbDocs.ItemsSource = db.Doctor.ToList();
         }
+        int contact = 0;
         public AppoinmnetPage(int num)
         {
+
             InitializeComponent();
+            contact = num;
             BIZ.Patient patient = db.Patient.Where(p => p.Contact == num).FirstOrDefault();
 
             txtContact.Text = patient.Contact.ToString();
@@ -50,6 +53,11 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
                 //BIZ.Doctor doctor = db.Doctor.Where(d => d.ID == DocID).FirstOrDefault();
 
                 //txtSpeclization.Text = doctor.Specilization.Name;
+                var doc = db.Doctor.Find(DocID);
+
+                decimal HospitalFee = 500;
+                decimal TotFee = doc.Fee + HospitalFee;
+                txtamount.Text = TotFee.ToString();
 
                 string query = "SELECT Specilizations.Name FROM Doctors INNER JOIN Specilizations" +
                         " ON Doctors.Specilization_ID = Specilizations.ID where Doctors.ID = '" + DocID + "'";
@@ -83,7 +91,7 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
             int roomNum = 0;
             string query1 = "makeAppoinment '" + dtpChannelDate.SelectedDate + "','" + DateTime.Now.ToShortTimeString() + "','" + TotFee + "','" + roomNum + "','" + channelNum + "','" + Convert.ToInt32(txtContact.Text) + "','" + DocID + "'";
             bool res = new SystemDAL().executeNonQuerys(query1);
-            if (res = true)
+            if (res == true)
             {
                 MessageBox.Show("You have successfully Made the Appoinment your Appoinment number is : " + channelNum);
             }
@@ -101,6 +109,13 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
 
             //// _Channel.p
 
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            
+            AppoinmentCancel appoinmentCancel = new AppoinmentCancel(contact);
+            appoinmentCancel.ShowDialog();
         }
     }
 }

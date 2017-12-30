@@ -34,6 +34,8 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
             {
                 AppoinmnetPage appoinmnetPage = new AppoinmnetPage(p.Contact);
                 MainFrame.Content = appoinmnetPage;
+                //Functions functions = new Functions(p.Contact);
+                //MainFrame.Content = functions;
             }
             else
             {
