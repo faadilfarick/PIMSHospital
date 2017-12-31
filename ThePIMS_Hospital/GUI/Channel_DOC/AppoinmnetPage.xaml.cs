@@ -27,6 +27,8 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
         {
             InitializeComponent();
             cmbDocs.ItemsSource = db.Doctor.ToList();
+            dtpChannelDate.DisplayDateStart = DateTime.Today;
+
         }
         int contact = 0;
         public AppoinmnetPage(int num)
@@ -116,6 +118,12 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
             
             AppoinmentCancel appoinmentCancel = new AppoinmentCancel(contact);
             appoinmentCancel.ShowDialog();
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            dtpChannelDate.DisplayDateStart = DateTime.Today;
+            dtpChannelDate.DisplayDateEnd = DateTime.Today.AddYears(1);
         }
     }
 }

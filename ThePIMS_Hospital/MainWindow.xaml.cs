@@ -17,6 +17,7 @@ using ThePIMS_Hospital.GUI.Channel_DOC;
 using ThePIMS_Hospital.GUI.Doctor;
 using ThePIMS_Hospital.GUI.Drug;
 using ThePIMS_Hospital.GUI.Patient;
+using ThePIMS_Hospital.GUI.Prescription;
 //using ThePIMS_Hospital.GUI.Prescription;
 
 namespace ThePIMS_Hospital
@@ -59,6 +60,12 @@ namespace ThePIMS_Hospital
         {
             Drug_Add drug = new  Drug_Add();
             drug.ShowDialog();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Presc_Add presc = new Presc_Add();
+            presc.ShowDialog();
         }
     }
 }
