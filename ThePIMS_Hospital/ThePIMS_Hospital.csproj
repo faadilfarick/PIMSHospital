@@ -293,6 +293,26 @@
     <Compile Include="Migrations\201712301221205_iyvuyv.Designer.cs">
       <DependentUpon>201712301221205_iyvuyv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712301733566_prescriptionDetailsCh.cs" />
+    <Compile Include="Migrations\201712301733566_prescriptionDetailsCh.Designer.cs">
+      <DependentUpon>201712301733566_prescriptionDetailsCh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712301736196_prescriptionID.cs" />
+    <Compile Include="Migrations\201712301736196_prescriptionID.Designer.cs">
+      <DependentUpon>201712301736196_prescriptionID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712301738341_prescriptionIDCh.cs" />
+    <Compile Include="Migrations\201712301738341_prescriptionIDCh.Designer.cs">
+      <DependentUpon>201712301738341_prescriptionIDCh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712301741279_prescriptionDetailsTrack.cs" />
+    <Compile Include="Migrations\201712301741279_prescriptionDetailsTrack.Designer.cs">
+      <DependentUpon>201712301741279_prescriptionDetailsTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712310338068_discPres.cs" />
+    <Compile Include="Migrations\201712310338068_discPres.Designer.cs">
+      <DependentUpon>201712310338068_discPres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -369,6 +389,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712301221205_iyvuyv.resx">
       <DependentUpon>201712301221205_iyvuyv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712301733566_prescriptionDetailsCh.resx">
+      <DependentUpon>201712301733566_prescriptionDetailsCh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712301736196_prescriptionID.resx">
+      <DependentUpon>201712301736196_prescriptionID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712301738341_prescriptionIDCh.resx">
+      <DependentUpon>201712301738341_prescriptionIDCh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712301741279_prescriptionDetailsTrack.resx">
+      <DependentUpon>201712301741279_prescriptionDetailsTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712310338068_discPres.resx">
+      <DependentUpon>201712310338068_discPres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

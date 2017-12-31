@@ -129,4 +129,68 @@ WHERE [ID]=@id;
 end
 
 
+create proc addPresc1
+(
+@deseasetype nvarchar(max),
+@description nvarchar(max),
+@patientContact int,
+@doctorId int,
+@tracking int
+
+)
+as
+begin
+insert into [dbo].[Prescriptions] ([Deseas_Type],[Description],[Doctor_ID],[Patient_Contact],[TrackNo]) 
+values(@deseasetype,@description,@doctorId,@patientContact,@tracking)
+end
+
+go
+
+create proc AddDrugToList
+(
+@DrugID int,
+@disc nvarchar(max),
+@qty int,
+@track int,
+@price decimal(18,2)
+)
+as 
+begin
+
+BEGIN TRANSACTION [Tran1]
+
+BEGIN TRY
+
+declare @name nvarchar(max)
+
+select @name= [Name] from [dbo].[Drug_Inventory] where [ID]=@DrugID--getting the drugname
+
+declare @drugQty int
+declare @drugUpdatedQty int
+
+select @drugQty=[availableQuantity] from [dbo].[Drug_Inventory]where [ID]=@DrugID--getting available qty
+
+set @drugUpdatedQty=@drugQty-@qty
+declare @issuedCurrent int
+declare @issuedUpdated int
+
+select @issuedCurrent=[Issued_Quantity]  from [dbo].[Drug_Inventory]where [ID]=@DrugID--getting current issued stock
+set @issuedUpdated =@issuedCurrent+@qty
+
+update [dbo].[Drug_Inventory] set [availableQuantity]=@drugUpdatedQty,[Issued_Quantity]=@issuedUpdated where[ID]=@DrugID --udating stock 
+
+insert into [dbo].[Prescription_details] ([Name],[discription],[Quantity],[TrackNo],[Price]) 
+values(@name,@disc,@qty,@track,@price) 
+
+COMMIT TRANSACTION [Tran1]
+
+END TRY
+BEGIN CATCH
+  ROLLBACK TRANSACTION [Tran1]
+END CATCH  
+
+end
+
+
+select max([TrackNo]) from [dbo].[Prescriptions]
 

@@ -39,7 +39,7 @@ namespace ThePIMS_Hospital.GUI.Patient
 
             try
             {
-                var patie = db.Patient.Where(p => p.Contact == patient.Contact);
+                var patie = db.Patient.Where(p => p.Contact == patient.Contact).FirstOrDefault();
                 if (patie != null)
                 {
                     MessageBox.Show("The Number : " + patient.Contact + " is already registered please Use that number for appointments. thnak you...");

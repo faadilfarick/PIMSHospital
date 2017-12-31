@@ -7,7 +7,7 @@
       mc:Ignorable="d"
       Title="AppoinmnetPage" Height="447.665" Width="671.053">
 
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <Grid.RowDefinitions>
             <RowDefinition Height="85*"/>
             <RowDefinition Height="68*"/>
