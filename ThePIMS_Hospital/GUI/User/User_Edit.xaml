@@ -1,0 +1,59 @@
+﻿<Window x:Class="ThePIMS_Hospital.GUI.User.User_Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThePIMS_Hospital.GUI.User"
+        mc:Ignorable="d"
+        Title="Doc_Edit" Height="378.947" Width="588.899" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="-1,0,1,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="261*"/>
+            <RowDefinition Height="71*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="329*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" HorizontalAlignment="Right"  Margin="0,50,0,0" Width="92">
+            <TextBlock Text="ID: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Name: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Contact : " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Email: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="DoB: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="NIC: " Margin="0,15,0,0"></TextBlock>
+
+            <TextBlock Text="Role: " Margin="0,15,0,0"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10,50,20,0" Grid.ColumnSpan="1">
+            <TextBox x:Name="txtID" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtName" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtcontact" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtemail" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+            <DatePicker x:Name="txtdob" Height="23"  Text="" Margin="0,5,0,0"/>
+            <TextBox x:Name="txtnic" Height="23" TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
+
+            <ComboBox x:Name="cmbRole"  Margin="0,5,10,0">
+                <ComboBoxItem Content="pharmacists"/>
+                <ComboBoxItem Content="dispenser"/>
+                <ComboBoxItem Content="cashier"/>
+                <ComboBoxItem Content="patient"/>
+                <ComboBoxItem Content="medicalsuperintendent"/>
+                <ComboBoxItem Content="admin"/>
+            </ComboBox>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="0" Margin="40,0,0,0" Grid.ColumnSpan="2" Width="432" >
+            <Button Content="Update"  Name="btnSave" Width="100" Height="30"  IsEnabled="False" Margin="30,0,0,0" Click="btnSave_Click"/>
+            <Button Content="Delete"  Name="btnDelete" Width="100" Height="30" IsEnabled="False" Margin="30,0,0,0" Click="btnDelete_Click"/>
+            <Button Content="Claer"  Name="btnClaer" Width="100" Height="30"  IsEnabled="True" Margin="30,0,0,0" Click="btnClaer_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Margin="0,50,10,0">
+            <Button Content="Find"  Name="btnFind" Width="Auto" Height="Auto" Margin="0,5,0,0" Click="btnFind_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

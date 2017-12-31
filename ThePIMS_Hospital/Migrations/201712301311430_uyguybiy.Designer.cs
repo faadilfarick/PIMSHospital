@@ -7,13 +7,13 @@ namespace ThePIMS_Hospital.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class iyvuyv : IMigrationMetadata
+    public sealed partial class uyguybiy : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(iyvuyv));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(uyguybiy));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712301221205_iyvuyv"; }
+            get { return "201712301311430_uyguybiy"; }
         }
         
         string IMigrationMetadata.Source
