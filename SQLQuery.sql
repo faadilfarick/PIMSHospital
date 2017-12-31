@@ -135,13 +135,14 @@ create proc addPresc1
 @description nvarchar(max),
 @patientContact int,
 @doctorId int,
-@tracking int
+@tracking int,
+@date Datetime
 
 )
 as
 begin
-insert into [dbo].[Prescriptions] ([Deseas_Type],[Description],[Doctor_ID],[Patient_Contact],[TrackNo]) 
-values(@deseasetype,@description,@doctorId,@patientContact,@tracking)
+insert into [dbo].[Prescriptions] ([Deseas_Type],[Description],[Doctor_ID],[Patient_Contact],[TrackNo],[DateTime]) 
+values(@deseasetype,@description,@doctorId,@patientContact,@tracking,@date)
 end
 
 go

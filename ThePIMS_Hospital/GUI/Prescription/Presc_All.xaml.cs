@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace ThePIMS_Hospital.GUI.Prescription
     /// <summary>
     /// Interaction logic for Presc_All.xaml
     /// </summary>
-    public partial class Presc_All : Window
+    public partial class Presc_All : MetroWindow
     {
         ApplicationDbContext db = new ApplicationDbContext();
         public Presc_All()

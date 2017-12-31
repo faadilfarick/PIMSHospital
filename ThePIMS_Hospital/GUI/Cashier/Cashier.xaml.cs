@@ -1,5 +1,4 @@
-﻿using MahApps.Metro.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ThePIMS_Hospital.GUI.Prescription
+namespace ThePIMS_Hospital.GUI.Cashier
 {
     /// <summary>
-    /// Interaction logic for Pres_Edit.xaml
+    /// Interaction logic for Cashier.xaml
     /// </summary>
-    public partial class Pres_Edit : MetroWindow
+    public partial class Cashier : Window
     {
-        public Pres_Edit()
+        public Cashier()
         {
             InitializeComponent();
         }

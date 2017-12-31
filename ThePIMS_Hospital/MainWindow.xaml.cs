@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ThePIMS_Hospital.DAL;
+using ThePIMS_Hospital.GUI.Cashier;
 using ThePIMS_Hospital.GUI.Channel_DOC;
 using ThePIMS_Hospital.GUI.Doctor;
 using ThePIMS_Hospital.GUI.Drug;
@@ -27,9 +29,11 @@ namespace ThePIMS_Hospital
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        ApplicationDbContext db = new ApplicationDbContext();
         public MainWindow()
         {
             InitializeComponent();
+            dgvAppoinmnets.ItemsSource = db.PatientChannel.Where(c => c.ChannelDate == DateTime.Now).ToList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -66,6 +70,17 @@ namespace ThePIMS_Hospital
         {
             Presc_Add presc = new Presc_Add();
             presc.ShowDialog();
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            Cashier cash = new Cashier();
+            cash.ShowDialog();
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

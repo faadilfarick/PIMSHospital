@@ -6,15 +6,44 @@
         xmlns:local="clr-namespace:ThePIMS_Hospital"
          xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="526.316" Width="813.158" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
+    <Controls:MetroWindow.Background>
+        <ImageBrush ImageSource="Content/background.png" Stretch="Fill" TileMode="FlipXY"/>
+    </Controls:MetroWindow.Background>
     <Grid>
-        <Button Content="Patient" HorizontalAlignment="Left" Margin="166,107,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
-        <Button Content="DOC" HorizontalAlignment="Left" Margin="312,107,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_1"/>
-        <Button Content="Channel" HorizontalAlignment="Left" Margin="166,171,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_2"/>
-        <Button Content="Prescriptions" HorizontalAlignment="Left" Margin="312,171,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_3"/>
-        <Button Content="drug" HorizontalAlignment="Left" Margin="312,171,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_4"/>
-        <Button Content="Prescrption" HorizontalAlignment="Left" Margin="166,220,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_5"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="338*"/>
+            <RowDefinition Height="55*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="557*"/>
+            <ColumnDefinition Width="89*"/>
+        </Grid.ColumnDefinitions>
 
+        <StackPanel Grid.Column="0" Orientation="Vertical" Grid.RowSpan="3" Grid.Row="1">
+            <Button Content="Patient" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click" Grid.Column="1"/>
+            <Button Content="DOC" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_1" Grid.Column="1"/>
+            <Button Content="Channel" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_2" Grid.Column="1"/>
+            <Button Content="Prescriptions" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_3" Grid.Column="1"/>
+            <Button Content="drug" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_4" Grid.Column="1"/>
+            <Button Content="Prescrption" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_5" Grid.Column="1"/>
+            <Button Content="Cashier" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_6" Grid.Column="1"/>
+
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="2">
+            <Button Content="Exit" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="69" Click="Button_Click_7" Grid.Column="1" Height="36"/>
+
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+            <TextBlock Margin="0,20,0,0" FontSize="22" Foreground="#FF051580" FontWeight="Bold">Appoinments For The Day</TextBlock>  
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
+            <DataGrid Name="dgvAppoinmnets"  MaxHeight="150" IsReadOnly="True" />
+
+        </StackPanel>
 
     </Grid>
 </Controls:MetroWindow>

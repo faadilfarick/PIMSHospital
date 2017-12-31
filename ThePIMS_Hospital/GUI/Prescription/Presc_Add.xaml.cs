@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace ThePIMS_Hospital.GUI.Prescription
     /// <summary>
     /// Interaction logic for Presc_Add.xaml
     /// </summary>
-    public partial class Presc_Add : Window
+    public partial class Presc_Add : MetroWindow
     {
         ApplicationDbContext db = new ApplicationDbContext();
 
@@ -82,7 +83,7 @@ namespace ThePIMS_Hospital.GUI.Prescription
 
              
                 string query = "addPresc1 '" + txtDeseaseType.Text + "','" + txtDescription.Text + "','" +
-                    "" + cmbPatient.SelectedValue + "','" + cmbDoctor.SelectedValue + "','" + trackNo + "'";
+                    "" + cmbPatient.SelectedValue + "','" + cmbDoctor.SelectedValue + "','" + trackNo + "','"+DateTime.Now+"'";
                 bool res = new SystemDAL().executeNonQuerys(query);
 
                 string qury = "AddDrugToList '" + cmbDrug.SelectedValue + "','" + txtDescription.Text + "','" + Convert.ToInt32(txtQty.Text) + "','" + trackNo + "','" + Convert.ToDecimal(txtPrice.Text) + "'";
@@ -115,6 +116,11 @@ namespace ThePIMS_Hospital.GUI.Prescription
                 txtPrice.Text = priceTosave.ToString();
             }
            
+        }
+
+        private void cmbDoctor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           // MessageBox.Show(cmbDoctor.SelectedValue + " " + cmbDoctor.Text);
         }
     }
 }

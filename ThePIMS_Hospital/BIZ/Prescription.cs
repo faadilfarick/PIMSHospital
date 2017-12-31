@@ -14,6 +14,7 @@ namespace ThePIMS_Hospital.BIZ
         public int TrackNo { get; set; }
         public string Deseas_Type{ get; set; }
         public string Description { get; set; }
+        public DateTime DateTime { get; set; }
         public virtual Patient Patient { get; set; }
         public virtual Doctor Doctor { get; set; }
 
