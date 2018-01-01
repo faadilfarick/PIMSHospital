@@ -139,6 +139,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="GUI\User\User_All.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\User\User_Edit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\User\User_Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -157,6 +169,7 @@
     <Compile Include="BIZ\Prescription.cs" />
     <Compile Include="BIZ\Prescription_details.cs" />
     <Compile Include="BIZ\Specilizations.cs" />
+    <Compile Include="BIZ\User.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\DBEstablish.cs" />
     <Compile Include="BIZ\Doctor.cs" />
@@ -211,6 +224,15 @@
     </Compile>
     <Compile Include="GUI\Prescription\Pres_Edit.xaml.cs">
       <DependentUpon>Pres_Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\User_All.xaml.cs">
+      <DependentUpon>User_All.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\User_Edit.xaml.cs">
+      <DependentUpon>User_Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\User_Add.xaml.cs">
+      <DependentUpon>User_Add.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -298,9 +320,13 @@
     <Compile Include="Migrations\201712300946308_cancelChannelingnew12.Designer.cs">
       <DependentUpon>201712300946308_cancelChannelingnew12.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712301221205_iyvuyv.cs" />
-    <Compile Include="Migrations\201712301221205_iyvuyv.Designer.cs">
-      <DependentUpon>201712301221205_iyvuyv.cs</DependentUpon>
+    <Compile Include="Migrations\201712301311430_uyguybiy.cs" />
+    <Compile Include="Migrations\201712301311430_uyguybiy.Designer.cs">
+      <DependentUpon>201712301311430_uyguybiy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712310403348_users.cs" />
+    <Compile Include="Migrations\201712310403348_users.Designer.cs">
+      <DependentUpon>201712310403348_users.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201712301733566_prescriptionDetailsCh.cs" />
     <Compile Include="Migrations\201712301733566_prescriptionDetailsCh.Designer.cs">
@@ -400,8 +426,11 @@
     <EmbeddedResource Include="Migrations\201712300946308_cancelChannelingnew12.resx">
       <DependentUpon>201712300946308_cancelChannelingnew12.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712301221205_iyvuyv.resx">
-      <DependentUpon>201712301221205_iyvuyv.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712301311430_uyguybiy.resx">
+      <DependentUpon>201712301311430_uyguybiy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712310403348_users.resx">
+      <DependentUpon>201712310403348_users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712301733566_prescriptionDetailsCh.resx">
       <DependentUpon>201712301733566_prescriptionDetailsCh.cs</DependentUpon>

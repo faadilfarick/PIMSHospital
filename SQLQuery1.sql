@@ -23,3 +23,5 @@ prediction report
 sales stock
 
 user creation(name email etc, dropdown roles)
+
+//Adding Users
