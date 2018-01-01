@@ -38,8 +38,9 @@ namespace ThePIMS_Hospital.GUI.User
                 txtcontact.Text = user.contact.ToString();
                 txtemail.Text = user.email;
                 txtnic.Text = user.nic;
-                txtdob.Text = user.dob;
+                txtdob.Text = user.dob.ToShortDateString();
                 cmbRole.Text = user.role;
+                txtPass.Password = user.Password;
                 btnFind.IsEnabled = false;
                 txtID.IsEnabled = false;
                 btnSave.IsEnabled = true;
@@ -60,6 +61,7 @@ namespace ThePIMS_Hospital.GUI.User
             txtnic.Text = "";
             txtdob.Text = "";
             cmbRole.Text = "";
+            txtPass.Password = "";
 
             btnFind.IsEnabled = true;
             txtID.IsEnabled = true;
@@ -76,13 +78,23 @@ namespace ThePIMS_Hospital.GUI.User
             user.contact = Convert.ToInt32(txtcontact.Text);
             user.email = txtemail.Text;
             user.nic = txtnic.Text;
-            user.dob = txtdob.Text;
+            user.dob = txtdob.SelectedDate.Value;
             user.role = cmbRole.Text;
+            user.Password = txtPass.Password;
 
             db.User.Attach(user);
             var entry = db.Entry(user);
             entry.State = System.Data.Entity.EntityState.Modified;
             var res = db.SaveChanges();
+            if (res == 1)
+            {
+                MessageBox.Show("User Updated Successfully");
+               
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong please try again.");
+            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)

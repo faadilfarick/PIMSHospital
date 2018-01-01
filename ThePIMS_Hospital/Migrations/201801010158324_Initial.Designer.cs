@@ -7,13 +7,13 @@ namespace ThePIMS_Hospital.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class cancelChanneling : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(cancelChanneling));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712300933446_cancelChanneling"; }
+            get { return "201801010158324_Initial"; }
         }
         
         string IMigrationMetadata.Source

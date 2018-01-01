@@ -72,12 +72,13 @@ create proc addDrugInventry
 @drugType nvarchar(max),
 @shelf nvarchar(max),
 @category int,
-@issued int=0
+@issued int=0,
+@available int =0
 )
 as 
 begin
-insert into [dbo].[Drug_Inventory]([Name],[Description],[Unit_Selling_Price],[Reorder_Level],[Unit_Buying_Price],[Drug_Type],[Shelf],[Drug_Category_ID],[Issued_Quantity])
-values(@Name,@disc,@unitSellingPrice,@reorder,@unitBuyingPri,@drugType,@shelf,@category,@issued)
+insert into [dbo].[Drug_Inventory]([Name],[Description],[Unit_Selling_Price],[Reorder_Level],[Unit_Buying_Price],[Drug_Type],[Shelf],[Drug_Category_ID],[Issued_Quantity],[availableQuantity])
+values(@Name,@disc,@unitSellingPrice,@reorder,@unitBuyingPri,@drugType,@shelf,@category,@issued,@available)
 end
 
 
@@ -128,6 +129,7 @@ WHERE [ID]=@id;
 
 end
 
+go
 
 create proc addPresc1
 (
@@ -146,6 +148,8 @@ values(@deseasetype,@description,@doctorId,@patientContact,@tracking,@date)
 end
 
 go
+
+
 
 create proc AddDrugToList
 (
@@ -192,6 +196,24 @@ END CATCH
 
 end
 
+go
+ 
+create proc PayForPriscription
+(
+@prisID int,
+@track int,
+@amount decimal(18,2),
+@dateTime datetime,
+@paymentType nvarchar(50),
+@contact int
+)
+as
+begin
+insert into [dbo].[Payments] ([Prescription_ID],[TrackNo],[Amount],[dateTime],[PaymentType],[Contact]) 
+values (@prisID,@track,@amount,@dateTime,@paymentType,@contact)
+end
 
-select max([TrackNo]) from [dbo].[Prescriptions]
+
+
+
 

@@ -240,117 +240,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712270329346_patient.cs" />
-    <Compile Include="Migrations\201712270329346_patient.Designer.cs">
-      <DependentUpon>201712270329346_patient.cs</DependentUpon>
+    <Compile Include="Migrations\201801010158324_Initial.cs" />
+    <Compile Include="Migrations\201801010158324_Initial.Designer.cs">
+      <DependentUpon>201801010158324_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712270333247_patientPK.cs" />
-    <Compile Include="Migrations\201712270333247_patientPK.Designer.cs">
-      <DependentUpon>201712270333247_patientPK.cs</DependentUpon>
+    <Compile Include="Migrations\201801010222107_userPassword.cs" />
+    <Compile Include="Migrations\201801010222107_userPassword.Designer.cs">
+      <DependentUpon>201801010222107_userPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712270341461_Docs.cs" />
-    <Compile Include="Migrations\201712270341461_Docs.Designer.cs">
-      <DependentUpon>201712270341461_Docs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712270343087_DocsUpdate.cs" />
-    <Compile Include="Migrations\201712270343087_DocsUpdate.Designer.cs">
-      <DependentUpon>201712270343087_DocsUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712270414524_patIdentity.cs" />
-    <Compile Include="Migrations\201712270414524_patIdentity.Designer.cs">
-      <DependentUpon>201712270414524_patIdentity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712270420420_patContcatUnique.cs" />
-    <Compile Include="Migrations\201712270420420_patContcatUnique.Designer.cs">
-      <DependentUpon>201712270420420_patContcatUnique.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712270621327_docContact.cs" />
-    <Compile Include="Migrations\201712270621327_docContact.Designer.cs">
-      <DependentUpon>201712270621327_docContact.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712270830233_speclilization.cs" />
-    <Compile Include="Migrations\201712270830233_speclilization.Designer.cs">
-      <DependentUpon>201712270830233_speclilization.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712270836335_speclilizationDoc.cs" />
-    <Compile Include="Migrations\201712270836335_speclilizationDoc.Designer.cs">
-      <DependentUpon>201712270836335_speclilizationDoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712270902217_speclilizationDocS.cs" />
-    <Compile Include="Migrations\201712270902217_speclilizationDocS.Designer.cs">
-      <DependentUpon>201712270902217_speclilizationDocS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300254598_DatatypechangeChennel.cs" />
-    <Compile Include="Migrations\201712300254598_DatatypechangeChennel.Designer.cs">
-      <DependentUpon>201712300254598_DatatypechangeChennel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300408314_drugInventryandCategory.cs" />
-    <Compile Include="Migrations\201712300408314_drugInventryandCategory.Designer.cs">
-      <DependentUpon>201712300408314_drugInventryandCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300414230_addnameInventry.cs" />
-    <Compile Include="Migrations\201712300414230_addnameInventry.Designer.cs">
-      <DependentUpon>201712300414230_addnameInventry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300428245_addQtyAviDrugInv.cs" />
-    <Compile Include="Migrations\201712300428245_addQtyAviDrugInv.Designer.cs">
-      <DependentUpon>201712300428245_addQtyAviDrugInv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300549257_prescriptionAndDetails.cs" />
-    <Compile Include="Migrations\201712300549257_prescriptionAndDetails.Designer.cs">
-      <DependentUpon>201712300549257_prescriptionAndDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300933446_cancelChanneling.cs" />
-    <Compile Include="Migrations\201712300933446_cancelChanneling.Designer.cs">
-      <DependentUpon>201712300933446_cancelChanneling.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300939360_cancelChannelingnew.cs" />
-    <Compile Include="Migrations\201712300939360_cancelChannelingnew.Designer.cs">
-      <DependentUpon>201712300939360_cancelChannelingnew.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300942479_cancelChannelingnew1.cs" />
-    <Compile Include="Migrations\201712300942479_cancelChannelingnew1.Designer.cs">
-      <DependentUpon>201712300942479_cancelChannelingnew1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300946048_cancelChannelingnew11.cs" />
-    <Compile Include="Migrations\201712300946048_cancelChannelingnew11.Designer.cs">
-      <DependentUpon>201712300946048_cancelChannelingnew11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300946308_cancelChannelingnew12.cs" />
-    <Compile Include="Migrations\201712300946308_cancelChannelingnew12.Designer.cs">
-      <DependentUpon>201712300946308_cancelChannelingnew12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712301311430_uyguybiy.cs" />
-    <Compile Include="Migrations\201712301311430_uyguybiy.Designer.cs">
-      <DependentUpon>201712301311430_uyguybiy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712310403348_users.cs" />
-    <Compile Include="Migrations\201712310403348_users.Designer.cs">
-      <DependentUpon>201712310403348_users.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712301733566_prescriptionDetailsCh.cs" />
-    <Compile Include="Migrations\201712301733566_prescriptionDetailsCh.Designer.cs">
-      <DependentUpon>201712301733566_prescriptionDetailsCh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712301736196_prescriptionID.cs" />
-    <Compile Include="Migrations\201712301736196_prescriptionID.Designer.cs">
-      <DependentUpon>201712301736196_prescriptionID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712301738341_prescriptionIDCh.cs" />
-    <Compile Include="Migrations\201712301738341_prescriptionIDCh.Designer.cs">
-      <DependentUpon>201712301738341_prescriptionIDCh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712301741279_prescriptionDetailsTrack.cs" />
-    <Compile Include="Migrations\201712301741279_prescriptionDetailsTrack.Designer.cs">
-      <DependentUpon>201712301741279_prescriptionDetailsTrack.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712310338068_discPres.cs" />
-    <Compile Include="Migrations\201712310338068_discPres.Designer.cs">
-      <DependentUpon>201712310338068_discPres.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712310552010_discPres1.cs" />
-    <Compile Include="Migrations\201712310552010_discPres1.Designer.cs">
-      <DependentUpon>201712310552010_discPres1.cs</DependentUpon>
+    <Compile Include="Migrations\201801010327111_payment.cs" />
+    <Compile Include="Migrations\201801010327111_payment.Designer.cs">
+      <DependentUpon>201801010327111_payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -366,89 +266,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201712270329346_patient.resx">
-      <DependentUpon>201712270329346_patient.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801010158324_Initial.resx">
+      <DependentUpon>201801010158324_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270333247_patientPK.resx">
-      <DependentUpon>201712270333247_patientPK.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801010222107_userPassword.resx">
+      <DependentUpon>201801010222107_userPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270341461_Docs.resx">
-      <DependentUpon>201712270341461_Docs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270343087_DocsUpdate.resx">
-      <DependentUpon>201712270343087_DocsUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270414524_patIdentity.resx">
-      <DependentUpon>201712270414524_patIdentity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270420420_patContcatUnique.resx">
-      <DependentUpon>201712270420420_patContcatUnique.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270621327_docContact.resx">
-      <DependentUpon>201712270621327_docContact.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270830233_speclilization.resx">
-      <DependentUpon>201712270830233_speclilization.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270836335_speclilizationDoc.resx">
-      <DependentUpon>201712270836335_speclilizationDoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712270902217_speclilizationDocS.resx">
-      <DependentUpon>201712270902217_speclilizationDocS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300254598_DatatypechangeChennel.resx">
-      <DependentUpon>201712300254598_DatatypechangeChennel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300408314_drugInventryandCategory.resx">
-      <DependentUpon>201712300408314_drugInventryandCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300414230_addnameInventry.resx">
-      <DependentUpon>201712300414230_addnameInventry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300428245_addQtyAviDrugInv.resx">
-      <DependentUpon>201712300428245_addQtyAviDrugInv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300549257_prescriptionAndDetails.resx">
-      <DependentUpon>201712300549257_prescriptionAndDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300933446_cancelChanneling.resx">
-      <DependentUpon>201712300933446_cancelChanneling.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300939360_cancelChannelingnew.resx">
-      <DependentUpon>201712300939360_cancelChannelingnew.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300942479_cancelChannelingnew1.resx">
-      <DependentUpon>201712300942479_cancelChannelingnew1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300946048_cancelChannelingnew11.resx">
-      <DependentUpon>201712300946048_cancelChannelingnew11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300946308_cancelChannelingnew12.resx">
-      <DependentUpon>201712300946308_cancelChannelingnew12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712301311430_uyguybiy.resx">
-      <DependentUpon>201712301311430_uyguybiy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712310403348_users.resx">
-      <DependentUpon>201712310403348_users.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712301733566_prescriptionDetailsCh.resx">
-      <DependentUpon>201712301733566_prescriptionDetailsCh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712301736196_prescriptionID.resx">
-      <DependentUpon>201712301736196_prescriptionID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712301738341_prescriptionIDCh.resx">
-      <DependentUpon>201712301738341_prescriptionIDCh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712301741279_prescriptionDetailsTrack.resx">
-      <DependentUpon>201712301741279_prescriptionDetailsTrack.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712310338068_discPres.resx">
-      <DependentUpon>201712310338068_discPres.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712310552010_discPres1.resx">
-      <DependentUpon>201712310552010_discPres1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801010327111_payment.resx">
+      <DependentUpon>201801010327111_payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -465,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Content\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\Reporting\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

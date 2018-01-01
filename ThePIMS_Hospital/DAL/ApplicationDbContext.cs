@@ -24,6 +24,8 @@ namespace ThePIMS_Hospital.DAL
         public DbSet<Prescription_details> Prescription_details { get; set; }
         public DbSet<Patient_Channel_Cancel> Patient_Channel_Cancel { get; set; }
         public DbSet<User> User { get; set; }
+        public DbSet<Payment> payment { get; set; }
+
 
     }
 }

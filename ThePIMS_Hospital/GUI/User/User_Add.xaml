@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThePIMS_Hospital.GUI.User"
         mc:Ignorable="d"
-        Title="Add User" Height="354.966" Width="596.794" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Add User" Height="401.672" Width="603.466" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="261*"/>
@@ -25,6 +25,8 @@
             <TextBlock Text="NIC: " Margin="0,15,0,0"></TextBlock>
 
             <TextBlock Text="Role: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Password: " Margin="0,15,0,0"></TextBlock>
+
 
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10,50,20,0" Grid.ColumnSpan="1">
@@ -42,6 +44,7 @@
                 <ComboBoxItem Content="medicalsuperintendent"/>
                 <ComboBoxItem Content="admin"/>
             </ComboBox>
+            <PasswordBox x:Name="txtPass" Height="23"  Margin="0,5,0,0"/>
 
         </StackPanel>
 

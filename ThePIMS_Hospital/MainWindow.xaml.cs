@@ -20,6 +20,7 @@ using ThePIMS_Hospital.GUI.Doctor;
 using ThePIMS_Hospital.GUI.Drug;
 using ThePIMS_Hospital.GUI.Patient;
 using ThePIMS_Hospital.GUI.Prescription;
+using ThePIMS_Hospital.GUI.User;
 //using ThePIMS_Hospital.GUI.Prescription;
 
 namespace ThePIMS_Hospital
@@ -33,7 +34,7 @@ namespace ThePIMS_Hospital
         public MainWindow()
         {
             InitializeComponent();
-            dgvAppoinmnets.ItemsSource = db.PatientChannel.Where(c => c.ChannelDate == DateTime.Now).ToList();
+          
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -81,6 +82,17 @@ namespace ThePIMS_Hospital
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            User_Add usr = new User_Add();
+            usr.ShowDialog();
+        }
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            dgvAppoinmnets.ItemsSource = db.PatientChannel.Where(c => c.ChannelDate == DateTime.Now).ToList();
         }
     }
 }

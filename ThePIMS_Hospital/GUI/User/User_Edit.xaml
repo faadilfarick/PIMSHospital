@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThePIMS_Hospital.GUI.User"
         mc:Ignorable="d"
-        Title="Doc_Edit" Height="378.947" Width="588.899" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Doc_Edit" Height="435.932" Width="588.899" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Margin="-1,0,1,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="261*"/>
@@ -26,6 +26,7 @@
             <TextBlock Text="NIC: " Margin="0,15,0,0"></TextBlock>
 
             <TextBlock Text="Role: " Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Password: " Margin="0,15,0,0"></TextBlock>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10,50,20,0" Grid.ColumnSpan="1">
             <TextBox x:Name="txtID" Height="23"  TextWrapping="Wrap" Text="" Margin="0,5,0,0"/>
@@ -43,7 +44,7 @@
                 <ComboBoxItem Content="medicalsuperintendent"/>
                 <ComboBoxItem Content="admin"/>
             </ComboBox>
-
+            <PasswordBox x:Name="txtPass" Height="23"  Margin="0,5,0,0"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="0" Margin="40,0,0,0" Grid.ColumnSpan="2" Width="432" >

@@ -7,13 +7,13 @@ namespace ThePIMS_Hospital.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class DocsUpdate : IMigrationMetadata
+    public sealed partial class userPassword : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DocsUpdate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(userPassword));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712270343087_DocsUpdate"; }
+            get { return "201801010222107_userPassword"; }
         }
         
         string IMigrationMetadata.Source

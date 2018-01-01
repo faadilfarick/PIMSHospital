@@ -13,7 +13,8 @@ namespace ThePIMS_Hospital.BIZ
         public int contact { get; set; }
         public string email { get; set; }
         public string nic { get; set; }
-        public string dob { get; set; }
+        public DateTime dob { get; set; }
         public string role { get; set; }
+        public string Password { get; set; }
     }
 }

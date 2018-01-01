@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace ThePIMS_Hospital.BIZ
     {
        
         public int ID { get; set; }
+       
         public int TrackNo { get; set; }
         public string Deseas_Type{ get; set; }
         public string Description { get; set; }

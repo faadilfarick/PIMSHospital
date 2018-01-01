@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ThePIMS_Hospital"
          xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="526.316" Width="813.158" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
+        Title="MainWindow" Height="526.316" Width="813.158" WindowStartupLocation="CenterScreen" WindowState="Maximized" Loaded="MetroWindow_Loaded" >
     <Controls:MetroWindow.Background>
         <ImageBrush ImageSource="Content/background.png" Stretch="Fill" TileMode="FlipXY"/>
     </Controls:MetroWindow.Background>
@@ -27,10 +27,11 @@
             <Button Content="Patient" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click" Grid.Column="1"/>
             <Button Content="DOC" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_1" Grid.Column="1"/>
             <Button Content="Channel" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_2" Grid.Column="1"/>
-            <Button Content="Prescriptions" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_3" Grid.Column="1"/>
+            <!--<Button Content="Prescriptions" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_3" Grid.Column="1"/>-->
             <Button Content="drug" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_4" Grid.Column="1"/>
             <Button Content="Prescrption" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_5" Grid.Column="1"/>
             <Button Content="Cashier" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_6" Grid.Column="1"/>
+            <Button Content="User" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_8" Grid.Column="1"/>
 
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="2">

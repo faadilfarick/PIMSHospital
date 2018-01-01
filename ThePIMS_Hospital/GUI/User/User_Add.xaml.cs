@@ -34,12 +34,21 @@ namespace ThePIMS_Hospital.GUI.User
             user.Name = txtName.Text;
             user.email = txtemail.Text;
             user.contact = Convert.ToInt32(txtcontact.Text);
-            user.dob = txtdob.Text;
+            user.dob = txtdob.SelectedDate.Value;
             user.nic = txtnic.Text;
             user.role = cmbRole.Text;
-
+            user.Password = txtPass.Password;
             db.User.Add(user);
             var res = db.SaveChanges();
+            if (res == 1)
+            {
+                MessageBox.Show("User Created Successfully");
+                clear();
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong please try again.");
+            }
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -52,6 +61,18 @@ namespace ThePIMS_Hospital.GUI.User
         {
             User_All _All = new User_All();
             _All.ShowDialog();
+        }
+
+        public void clear()
+        {
+            //txtID.Text = "";
+            txtName.Text = "";
+            txtcontact.Text = "";
+            txtemail.Text = "";
+            txtnic.Text = "";
+            txtdob.Text = "";
+            cmbRole.Text = "";
+            txtPass.Password = "";
         }
 
     }
