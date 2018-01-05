@@ -20,6 +20,7 @@ using ThePIMS_Hospital.GUI.Doctor;
 using ThePIMS_Hospital.GUI.Drug;
 using ThePIMS_Hospital.GUI.Patient;
 using ThePIMS_Hospital.GUI.Prescription;
+using ThePIMS_Hospital.GUI.Reporting;
 using ThePIMS_Hospital.GUI.User;
 //using ThePIMS_Hospital.GUI.Prescription;
 
@@ -93,6 +94,12 @@ namespace ThePIMS_Hospital
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
         {
             dgvAppoinmnets.ItemsSource = db.PatientChannel.Where(c => c.ChannelDate == DateTime.Now).ToList();
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            Report_Dash_GUI rpt = new Report_Dash_GUI();
+            rpt.ShowDialog();
         }
     }
 }

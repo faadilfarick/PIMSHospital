@@ -32,6 +32,7 @@
             <Button Content="Prescrption" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_5" Grid.Column="1"/>
             <Button Content="Cashier" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_6" Grid.Column="1"/>
             <Button Content="User" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_8" Grid.Column="1"/>
+            <Button Content="Report" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_9" Grid.Column="1"/>
 
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="2">

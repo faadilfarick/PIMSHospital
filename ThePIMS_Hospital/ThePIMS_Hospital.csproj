@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -42,6 +45,14 @@
     </Reference>
     <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.Viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TOP-up\Final project\SYSTEM\WPF POS\SAPBusinessObjects.WPF.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TOP-up\Final project\SYSTEM\WPF POS\SAPBusinessObjects.WPF.ViewerShared.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -115,6 +126,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\Drug\Drug_Purchase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Patient\Patient_All.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +154,54 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="GUI\Reporting\AppoinmentCancelChart_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\AppoinmentMonthlyChart_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\AppoinmentsReport_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\DrugPurchaseChart_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\DrugPurchaseReport_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\MonthlySalesChart_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\PurchaseChart_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\PurchaseReport_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\Report_Dash_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\SalesChart_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\SalesReportMonthly_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Reporting\SalesReport_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\User\User_All.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -159,8 +222,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BIZ\Appoinment_Report.cs" />
     <Compile Include="BIZ\Drug_Category.cs" />
     <Compile Include="BIZ\Drug_Inventory.cs" />
+    <Compile Include="BIZ\Drug_Purchase.cs" />
+    <Compile Include="BIZ\Drug_Report.cs" />
+    <Compile Include="BIZ\Drug_Supplier.cs" />
     <Compile Include="BIZ\Patient.cs" />
     <Compile Include="BIZ\Patient_Channel.cs" />
     <Compile Include="BIZ\Patient_Channel_Cancel.cs" />
@@ -168,6 +235,8 @@
     <Compile Include="BIZ\Payment.cs" />
     <Compile Include="BIZ\Prescription.cs" />
     <Compile Include="BIZ\Prescription_details.cs" />
+    <Compile Include="BIZ\Purchase_Report.cs" />
+    <Compile Include="BIZ\SalesReport.cs" />
     <Compile Include="BIZ\Specilizations.cs" />
     <Compile Include="BIZ\User.cs" />
     <Compile Include="DAL\ApplicationDbContext.cs" />
@@ -207,6 +276,9 @@
     <Compile Include="GUI\Drug\Drug_Edit.xaml.cs">
       <DependentUpon>Drug_Edit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Drug\Drug_Purchase.xaml.cs">
+      <DependentUpon>Drug_Purchase.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Patient\Patient_All.xaml.cs">
       <DependentUpon>Patient_All.xaml</DependentUpon>
     </Compile>
@@ -224,6 +296,127 @@
     </Compile>
     <Compile Include="GUI\Prescription\Pres_Edit.xaml.cs">
       <DependentUpon>Pres_Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\AppoinmentCancelChart_GUI.xaml.cs">
+      <DependentUpon>AppoinmentCancelChart_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\AppoinmentCancelChart_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppoinmentCancelChart_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GUI\Reporting\AppoinmentChart_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppoinmentChart_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GUI\Reporting\AppoinmentMonthlyChart_GUI.xaml.cs">
+      <DependentUpon>AppoinmentMonthlyChart_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\AppoinmentsReport_GUI.xaml.cs">
+      <DependentUpon>AppoinmentsReport_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\AppoinmentsReport_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppoinmentsReport_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GUI\Reporting\DataSet.cs">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\DrugPurchaseChart.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DrugPurchaseChart.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GUI\Reporting\DrugPurchaseChart_GUI.xaml.cs">
+      <DependentUpon>DrugPurchaseChart_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\DrugPurchaseReport_GUI.xaml.cs">
+      <DependentUpon>DrugPurchaseReport_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\DrugPurchase_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DrugPurchase_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GUI\Reporting\MonthlySalesChart_GUI.xaml.cs">
+      <DependentUpon>MonthlySalesChart_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\MontlySalesChart_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MontlySalesChart_RPT.rpt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Reporting\PurchaseChart_GUI.xaml.cs">
+      <DependentUpon>PurchaseChart_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\PurchaseChart_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchaseChart_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GUI\Reporting\PurchaseReport_GUI.xaml.cs">
+      <DependentUpon>PurchaseReport_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\PurchaseReport_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchaseReport_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GUI\Reporting\Report_Dash_GUI.xaml.cs">
+      <DependentUpon>Report_Dash_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\SalesChart_GUI.xaml.cs">
+      <DependentUpon>SalesChart_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\SalesChart_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesChart_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GUI\Reporting\SalesReportMonthly_GUI.xaml.cs">
+      <DependentUpon>SalesReportMonthly_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\SalesReportMonthly_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesReportMonthly_RPT.rpt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Reporting\SalesReport_GUI.xaml.cs">
+      <DependentUpon>SalesReport_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\SalesReport_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesReport_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="GUI\User\User_All.xaml.cs">
       <DependentUpon>User_All.xaml</DependentUpon>
@@ -252,6 +445,14 @@
     <Compile Include="Migrations\201801010327111_payment.Designer.cs">
       <DependentUpon>201801010327111_payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801020438037_DrugSuppliersandPurchase.cs" />
+    <Compile Include="Migrations\201801020438037_DrugSuppliersandPurchase.Designer.cs">
+      <DependentUpon>201801020438037_DrugSuppliersandPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801020443319_DrugSuppliersandPurchase1.cs" />
+    <Compile Include="Migrations\201801020443319_DrugSuppliersandPurchase1.Designer.cs">
+      <DependentUpon>201801020443319_DrugSuppliersandPurchase1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -266,6 +467,61 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="GUI\Reporting\AppoinmentCancelChart_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AppoinmentCancelChart_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\AppoinmentChart_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AppoinmentChart_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\AppoinmentsReport_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AppoinmentsReport_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\DrugPurchaseChart.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DrugPurchaseChart.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\DrugPurchase_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DrugPurchase_Report.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\MontlySalesChart_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MontlySalesChart_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\PurchaseChart_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurchaseChart_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\PurchaseReport_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurchaseReport_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\SalesChart_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesChart_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\SalesReportMonthly_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesReportMonthly_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\SalesReport_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesReport_RPT.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801010158324_Initial.resx">
       <DependentUpon>201801010158324_Initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,10 +531,27 @@
     <EmbeddedResource Include="Migrations\201801010327111_payment.resx">
       <DependentUpon>201801010327111_payment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801020438037_DrugSuppliersandPurchase.resx">
+      <DependentUpon>201801020438037_DrugSuppliersandPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801020443319_DrugSuppliersandPurchase1.resx">
+      <DependentUpon>201801020443319_DrugSuppliersandPurchase1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GUI\Reporting\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GUI\Reporting\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUI\Reporting\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -292,7 +565,7 @@
     <Resource Include="Content\background.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\Reporting\" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

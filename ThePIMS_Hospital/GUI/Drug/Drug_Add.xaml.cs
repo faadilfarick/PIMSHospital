@@ -121,5 +121,11 @@ namespace ThePIMS_Hospital.GUI.Drug
         {
             clear();
         }
+
+        private void btnPurchase_Click(object sender, RoutedEventArgs e)
+        {
+            Drug_Purchase pur = new Drug_Purchase();
+            pur.ShowDialog();
+        }
     }
 }

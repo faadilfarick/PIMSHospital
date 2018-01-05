@@ -46,6 +46,7 @@
             <Button Content="Edit"  Name="btnEdit" Width="100" Height="30" Margin="30,0,0,0" Click="btnEdit_Click"/>
             <Button Content="Delete"  Name="btnDelete" Width="100" Height="30" Margin="30,0,0,0" />
             <Button Content="Clear"  Name="Clear" Width="100" Height="30" Margin="30,0,0,0" Click="Clear_Click"  />
+            <Button Content="Purchase Stock"  Name="btnPurchase" Width="100" Height="30" Margin="30,0,0,0" Click="btnPurchase_Click"  />
 
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="2" >

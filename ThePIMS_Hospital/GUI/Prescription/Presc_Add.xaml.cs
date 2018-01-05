@@ -83,7 +83,7 @@ namespace ThePIMS_Hospital.GUI.Prescription
 
              
                 string query = "addPresc1 '" + txtDeseaseType.Text + "','" + txtDescription.Text + "','" +
-                    "" + cmbPatient.SelectedValue + "','" + cmbDoctor.SelectedValue + "','" + trackNo + "','"+DateTime.Now+"'";
+                    "" + cmbPatient.SelectedValue + "','" + cmbDoctor.SelectedValue + "','" + trackNo + "','"+DateTime.Now.ToShortDateString()+"'";
                 bool res = new SystemDAL().executeNonQuerys(query);
 
                 string qury = "AddDrugToList '" + cmbDrug.SelectedValue + "','" + txtDescription.Text + "','" + Convert.ToInt32(txtQty.Text) + "','" + trackNo + "','" + Convert.ToDecimal(txtPrice.Text) + "'";

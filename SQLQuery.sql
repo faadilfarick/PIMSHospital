@@ -112,22 +112,40 @@ select * from [dbo].[Patient_Channel] where [Patient_Contact]=0776005535
 
 
 go
-create proc cancelAppoinment
+
+CREATE proc [dbo].[cancelAppoinment]
 (
 @id int
 )
 as
 begin
 
-INSERT INTO [dbo].[Patient_Channel_Cancel] ([ChannelDate],[ChannelTime],[Fee],[RoomNumber],[ChannelNumber],[Patient_ID],[Patient_Contact],[Doctor_ID])
-SELECT [ChannelDate],[ChannelTime],[Fee],[RoomNumber],[ChannelNumber],[Patient_ID],[Patient_Contact],[Doctor_ID]
+BEGIN TRANSACTION [Tran1]
+
+BEGIN TRY
+
+INSERT INTO [dbo].[Patient_Channel_Cancel] ([ID],[ChannelDate],[ChannelTime],[Fee],[RoomNumber],[ChannelNumber],[Patient_ID],[Patient_Contact],[Doctor_ID])
+SELECT [ID],[ChannelDate],[ChannelTime],[Fee],[RoomNumber],[ChannelNumber],[Patient_ID],[Patient_Contact],[Doctor_ID]
 FROM [dbo].[Patient_Channel]
 WHERE [ID]=@id;
 
 DELETE FROM [dbo].[Patient_Channel]
 WHERE [ID]=@id;
 
+
+COMMIT TRANSACTION [Tran1]
+
+END TRY
+BEGIN CATCH
+ SELECT   
+        ERROR_NUMBER() AS ErrorNumber  
+       ,ERROR_MESSAGE() AS ErrorMessage; 
+
+  ROLLBACK TRANSACTION [Tran1]
+END CATCH  
 end
+
+
 
 go
 
@@ -213,7 +231,211 @@ insert into [dbo].[Payments] ([Prescription_ID],[TrackNo],[Amount],[dateTime],[P
 values (@prisID,@track,@amount,@dateTime,@paymentType,@contact)
 end
 
+go
+
+create proc GetSalesReportDay
+(
+@date date
+)
+as
+begin
+
+SELECT        Prescription_details.ID, Prescription_details.Name,Prescription_details.TrackNo, Prescription_details.Quantity, Prescription_details.Price
+FROM            Prescription_details INNER JOIN
+                         Prescriptions ON Prescription_details.TrackNo = Prescriptions.TrackNo where Prescriptions.DateTime=@date
+
+end
+
+go
+
+create proc GetSumSalesReportDay
+(
+@date date
+)
+as
+begin
+
+SELECT        sum( Prescription_details.Price)
+FROM            Prescription_details INNER JOIN
+                         Prescriptions ON Prescription_details.TrackNo = Prescriptions.TrackNo where Prescriptions.DateTime=@date
+
+end
+
+
+go
+
+create proc PurchaseDrugInventry
+(
+@drugId int,
+@date date,
+@qty int,
+@suppId int
+)
+as
+begin
+
+BEGIN TRANSACTION [Tran1]
+
+BEGIN TRY
+
+declare @AvQty int
+
+select @AvQty=[availableQuantity] from [dbo].[Drug_Inventory] where [ID]=@drugId
+
+declare @newQty int
+
+set @newQty=@AvQty+@qty
+
+update [dbo].[Drug_Inventory] set [availableQuantity]=@newQty where [ID]=@drugId
+
+insert into [dbo].[Drug_Purchase] ([Drug_Inventry_ID],[Date],[Quantity],[Drug_Supplier_ID]) 
+values (@drugId,@date,@qty,@suppId)
+
+COMMIT TRANSACTION [Tran1]
+
+END TRY
+BEGIN CATCH
+  ROLLBACK TRANSACTION [Tran1]
+END CATCH  
+
+end
 
 
 
+go
 
+create proc GetPurchaseReportDay
+(
+@date date
+)
+as
+begin
+
+SELECT        Drug_Purchase.ID, Drug_Inventory.Name, Drug_Purchase.Quantity, Drug_Supplier.Name AS Expr1
+FROM            Drug_Inventory INNER JOIN
+                         Drug_Purchase ON Drug_Inventory.ID = Drug_Purchase.Drug_Inventry_ID INNER JOIN
+                         Drug_Supplier ON Drug_Purchase.Drug_Supplier_ID = Drug_Supplier.ID where  Drug_Purchase.Date=@date
+end
+
+
+go
+
+
+
+create proc GetSalesReportDayChart
+(
+@date date,
+@date2 date
+)
+as
+begin
+
+SELECT         Prescriptions.DateTime as date,sum(Prescription_details.Price) as total
+FROM            Prescription_details INNER JOIN
+                         Prescriptions ON Prescription_details.TrackNo = Prescriptions.TrackNo where Prescriptions.DateTime between @date and @date2
+						 group by  Prescriptions.DateTime
+
+end
+
+
+GetSalesReportDayChart '2017-01-01','2018-01-03'
+
+GetPurchaseReportChart '12/31/2017','1/3/2018'
+
+go
+
+create proc GetPurchaseReportChart
+(
+@date date,
+@date2 date
+)
+as
+begin
+
+SELECT         Drug_Purchase.Date,SUM( Drug_Purchase.Quantity) AS QTY,Drug_Inventory.Name AS Expr1
+FROM            Drug_Inventory INNER JOIN
+                         Drug_Purchase ON Drug_Inventory.ID = Drug_Purchase.Drug_Inventry_ID INNER JOIN
+                         Drug_Supplier ON Drug_Purchase.Drug_Supplier_ID = Drug_Supplier.ID where  Drug_Purchase.Date between @date and @date2
+						 GROUP BY Drug_Purchase.Date,Drug_Inventory.Name ORDER BY Drug_Purchase.Date
+end
+
+
+
+go
+--monthly sales
+
+create proc monthlySales
+
+as
+begin
+SELECT        Year(Prescriptions.DateTime)as SalesYear, MONTH(Prescriptions.DateTime) as SalesMonth,sum(Prescription_details.Price) as total
+FROM            Prescription_details INNER JOIN
+                         Prescriptions ON Prescription_details.TrackNo = Prescriptions.TrackNo 
+						 GROUP BY YEAR(Prescriptions.DateTime), MONTH(Prescriptions.DateTime)
+						 ORDER BY YEAR(Prescriptions.DateTime), MONTH(Prescriptions.DateTime)
+end
+
+
+
+select * from [dbo].[Patient_Channel]
+select * from [dbo].[Patient_Channel_Cancel]
+
+go
+
+create proc appoinmentCountMonth
+as
+begin
+
+select year([dbo].[Patient_Channel].[ChannelDate]) as Years,month([dbo].[Patient_Channel].[ChannelDate]) as Months,count([dbo].[Patient_Channel].ID) as appoinmentCount from 
+[dbo].[Patient_Channel]
+GROUP BY YEAR([dbo].[Patient_Channel].[ChannelDate]), MONTH([dbo].[Patient_Channel].[ChannelDate])
+						 ORDER BY YEAR([dbo].[Patient_Channel].[ChannelDate]), MONTH([dbo].[Patient_Channel].[ChannelDate])
+
+end
+
+go
+
+create proc appoinmentCancelCountMonth
+as
+begin
+
+select year([dbo].[Patient_Channel_Cancel].[ChannelDate]) as Years,month([dbo].[Patient_Channel_Cancel].[ChannelDate]) as Months,count([dbo].[Patient_Channel_Cancel].ID) as appoinmentCancelCount from 
+[dbo].[Patient_Channel_Cancel]
+GROUP BY YEAR([dbo].[Patient_Channel_Cancel].[ChannelDate]), MONTH([dbo].[Patient_Channel_Cancel].[ChannelDate])
+						 ORDER BY YEAR([dbo].[Patient_Channel_Cancel].[ChannelDate]), MONTH([dbo].[Patient_Channel_Cancel].[ChannelDate])
+
+end
+
+go
+
+create proc DrugqtyPurchasedForTheMonth 
+(
+@DID int
+)
+as
+begin
+
+select year(Drug_Purchase.Date) as Years,month(Drug_Purchase.Date) as Months,Drug_Inventory.Name, Drug_Category.Name AS Cat, sum( Drug_Purchase.Quantity)as Qty
+FROM            Drug_Category INNER JOIN
+                         Drug_Inventory ON Drug_Category.ID = Drug_Inventory.Drug_Category_ID INNER JOIN
+                         Drug_Purchase ON Drug_Inventory.ID = Drug_Purchase.Drug_Inventry_ID where Drug_Inventory.ID=@DID
+GROUP BY YEAR(Drug_Purchase.Date), MONTH(Drug_Purchase.Date),Drug_Category.Name,Drug_Inventory.Name
+						 ORDER BY YEAR(Drug_Purchase.Date), MONTH(Drug_Purchase.Date) 
+
+end
+
+go
+
+create proc DrugqtyPurchasedForTheMonthAll
+
+as
+begin
+
+select year(Drug_Purchase.Date) as Years,month(Drug_Purchase.Date) as Months,Drug_Inventory.Name, Drug_Category.Name AS Cat, sum( Drug_Purchase.Quantity)as Qty
+FROM            Drug_Category INNER JOIN
+                         Drug_Inventory ON Drug_Category.ID = Drug_Inventory.Drug_Category_ID INNER JOIN
+                         Drug_Purchase ON Drug_Inventory.ID = Drug_Purchase.Drug_Inventry_ID 
+GROUP BY YEAR(Drug_Purchase.Date), MONTH(Drug_Purchase.Date),Drug_Category.Name,Drug_Inventory.Name
+						 ORDER BY YEAR(Drug_Purchase.Date), MONTH(Drug_Purchase.Date) 
+
+end

@@ -1,0 +1,33 @@
+﻿<Controls:MetroWindow  x:Class="ThePIMS_Hospital.GUI.Reporting.Report_Dash_GUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
+        Title="Report_Dash_GUI" Height="564.202" Width="1064.898" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="145*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Sales Report" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_1" Grid.Column="1" Height="78"/>
+            <Button Content="Purchase Report" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_2" Grid.Column="1" Height="78"/>
+            <Button Content="sales monthly Report" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_6" Grid.Column="1" Height="78"/>
+            <Button Content="Appoinmnets Report" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_9" Grid.Column="1" Height="78"/>
+            <Button Content="Drug Purchase Report" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_10" Grid.Column="1" Height="78"/>
+
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Button Content="Sales Chart" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_3" Grid.Column="1" Height="78"/>
+            <Button Content="Purchase Chart" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_4" Grid.Column="1" Height="78"/>
+            <Button Content="Monthly Sales Chart" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_5" Grid.Column="1" Height="78"/>
+            <Button Content="Appoinmnets Chart" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="135" Click="Button_Click_7" Grid.Column="1" Height="78"/>
+            <Button Content="Appoinmnet Canceletions" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="169" Click="Button_Click_8" Grid.Column="1" Height="78"/>
+            <Button Content="Drug Purchase Chart" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="169" Click="Button_Click_11" Grid.Column="1" Height="78"/>
+
+        </StackPanel>
+    </Grid>
+</Controls:MetroWindow>
