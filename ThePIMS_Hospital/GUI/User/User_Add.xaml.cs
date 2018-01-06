@@ -30,25 +30,34 @@ namespace ThePIMS_Hospital.GUI.User
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            BIZ.User user = new BIZ.User();
-            user.Name = txtName.Text;
-            user.email = txtemail.Text;
-            user.contact = Convert.ToInt32(txtcontact.Text);
-            user.dob = txtdob.SelectedDate.Value;
-            user.nic = txtnic.Text;
-            user.role = cmbRole.Text;
-            user.Password = txtPass.Password;
-            db.User.Add(user);
-            var res = db.SaveChanges();
-            if (res == 1)
+            try
             {
-                MessageBox.Show("User Created Successfully");
-                clear();
+                BIZ.User user = new BIZ.User();
+                user.Name = txtName.Text;
+                user.email = txtemail.Text;
+                user.contact = Convert.ToInt32(txtcontact.Text);
+                user.dob = txtdob.SelectedDate.Value;
+                user.nic = txtnic.Text;
+                user.role = cmbRole.Text;
+                user.Password = txtPass.Password;
+                db.User.Add(user);
+                var res = db.SaveChanges();
+                if (res == 1)
+                {
+                    MessageBox.Show("User Created Successfully");
+                    clear();
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong please try again.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Something went wrong please try again.");
+
+                MessageBox.Show(ex.Message);
             }
+           
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)

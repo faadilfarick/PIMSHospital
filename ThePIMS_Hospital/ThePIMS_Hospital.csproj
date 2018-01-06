@@ -214,6 +214,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -427,6 +431,9 @@
     <Compile Include="GUI\User\User_Add.xaml.cs">
       <DependentUpon>User_Add.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -452,6 +459,18 @@
     <Compile Include="Migrations\201801020443319_DrugSuppliersandPurchase1.cs" />
     <Compile Include="Migrations\201801020443319_DrugSuppliersandPurchase1.Designer.cs">
       <DependentUpon>201801020443319_DrugSuppliersandPurchase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801060417522_EmailUniqueUser.cs" />
+    <Compile Include="Migrations\201801060417522_EmailUniqueUser.Designer.cs">
+      <DependentUpon>201801060417522_EmailUniqueUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801060423340_IDUniqueUser.cs" />
+    <Compile Include="Migrations\201801060423340_IDUniqueUser.Designer.cs">
+      <DependentUpon>201801060423340_IDUniqueUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801060430409_IDUniqueUserIduntity.cs" />
+    <Compile Include="Migrations\201801060430409_IDUniqueUserIduntity.Designer.cs">
+      <DependentUpon>201801060430409_IDUniqueUserIduntity.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -537,6 +556,15 @@
     <EmbeddedResource Include="Migrations\201801020443319_DrugSuppliersandPurchase1.resx">
       <DependentUpon>201801020443319_DrugSuppliersandPurchase1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801060417522_EmailUniqueUser.resx">
+      <DependentUpon>201801060417522_EmailUniqueUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801060423340_IDUniqueUser.resx">
+      <DependentUpon>201801060423340_IDUniqueUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801060430409_IDUniqueUserIduntity.resx">
+      <DependentUpon>201801060430409_IDUniqueUserIduntity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -566,6 +594,15 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\male-shadow-circle-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\rep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\teEDdQ.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

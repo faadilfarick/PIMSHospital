@@ -37,6 +37,12 @@ namespace ThePIMS_Hospital
             InitializeComponent();
           
         }
+        public MainWindow(string userRole,string userName)
+        {
+            InitializeComponent();
+            txtuser.Text = "Hello " + userName + "";
+
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -82,7 +88,9 @@ namespace ThePIMS_Hospital
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
+            Login login = new Login();
             this.Close();
+            login.ShowDialog();
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)

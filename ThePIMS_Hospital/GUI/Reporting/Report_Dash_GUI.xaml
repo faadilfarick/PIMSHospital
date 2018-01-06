@@ -4,6 +4,9 @@
                  xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 
         Title="Report_Dash_GUI" Height="564.202" Width="1064.898" WindowStartupLocation="CenterScreen">
+    <Controls:MetroWindow.Background>
+        <ImageBrush ImageSource="/ThePIMS_Hospital;component/Content/teEDdQ.jpg"/>
+    </Controls:MetroWindow.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="101*"/>

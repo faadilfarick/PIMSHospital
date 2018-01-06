@@ -11,6 +11,7 @@
         <ImageBrush ImageSource="Content/background.png" Stretch="Fill" TileMode="FlipXY"/>
     </Controls:MetroWindow.Background>
     <Grid>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="53*"/>
             <RowDefinition Height="49*"/>
@@ -36,7 +37,7 @@
 
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="2">
-            <Button Content="Exit" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="69" Click="Button_Click_7" Grid.Column="1" Height="36"/>
+            <Button Content="Logout" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="69" Click="Button_Click_7" Grid.Column="1" Height="36"/>
 
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
@@ -46,6 +47,11 @@
             <DataGrid Name="dgvAppoinmnets"  MaxHeight="150" IsReadOnly="True" />
 
         </StackPanel>
+        <StackPanel Grid.ColumnSpan="3">
+            <TextBlock HorizontalAlignment="Right" Margin="0,10,0,0" x:Name="txtuser" FontSize="22" Foreground="#FF051580" Text="Hello" FontWeight="Bold" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+
+        </StackPanel>
+
 
     </Grid>
 </Controls:MetroWindow>
