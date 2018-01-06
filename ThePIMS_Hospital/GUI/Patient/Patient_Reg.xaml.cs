@@ -20,7 +20,7 @@ namespace ThePIMS_Hospital.GUI.Patient
     /// <summary>
     /// Interaction logic for Patient_Reg.xaml
     /// </summary>
-    public partial class Patient_Reg : Window
+    public partial class Patient_Reg : MetroWindow
     {
         ApplicationDbContext db = new ApplicationDbContext();
         public Patient_Reg()

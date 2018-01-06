@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
     /// <summary>
     /// Interaction logic for Channel_Doc.xaml
     /// </summary>
-    public partial class Channel_Doc : Window
+    public partial class Channel_Doc : MetroWindow
     {
         ApplicationDbContext db = new ApplicationDbContext();
         public Channel_Doc()

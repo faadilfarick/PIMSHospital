@@ -338,9 +338,9 @@ FROM            Prescription_details INNER JOIN
 end
 
 
-GetSalesReportDayChart '2017-01-01','2018-01-03'
+--GetSalesReportDayChart '2017-01-01','2018-01-03'
 
-GetPurchaseReportChart '12/31/2017','1/3/2018'
+--GetPurchaseReportChart '12/31/2017','1/3/2018'
 
 go
 
@@ -438,4 +438,16 @@ FROM            Drug_Category INNER JOIN
 GROUP BY YEAR(Drug_Purchase.Date), MONTH(Drug_Purchase.Date),Drug_Category.Name,Drug_Inventory.Name
 						 ORDER BY YEAR(Drug_Purchase.Date), MONTH(Drug_Purchase.Date) 
 
+end
+
+
+go
+
+create proc drugInventryReportData
+as
+begin
+
+SELECT        Drug_Inventory.ID,Drug_Inventory.Name, Drug_Inventory.Unit_Selling_Price, Drug_Category.Name AS Category, Drug_Inventory.Reorder_Level, Drug_Inventory.Drug_Type, Drug_Inventory.Shelf, Drug_Inventory.availableQuantity
+FROM            Drug_Category INNER JOIN
+                         Drug_Inventory ON Drug_Category.ID = Drug_Inventory.Drug_Category_ID
 end

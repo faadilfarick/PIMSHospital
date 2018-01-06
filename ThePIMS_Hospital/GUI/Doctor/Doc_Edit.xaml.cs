@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace ThePIMS_Hospital.GUI.Doctor
     /// <summary>
     /// Interaction logic for Doc_Edit.xaml
     /// </summary>
-    public partial class Doc_Edit : Window
+    public partial class Doc_Edit : MetroWindow
     {
         ApplicationDbContext db = new ApplicationDbContext();
 

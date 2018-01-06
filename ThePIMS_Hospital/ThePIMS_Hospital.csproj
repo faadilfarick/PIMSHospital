@@ -174,6 +174,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\Reporting\InventryRerport_GUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Reporting\MonthlySalesChart_GUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -359,6 +363,16 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="GUI\Reporting\InventryRerport_GUI.xaml.cs">
+      <DependentUpon>InventryRerport_GUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reporting\InventryRerport_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventryRerport_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="GUI\Reporting\MonthlySalesChart_GUI.xaml.cs">
       <DependentUpon>MonthlySalesChart_GUI.xaml</DependentUpon>
     </Compile>
@@ -472,6 +486,10 @@
     <Compile Include="Migrations\201801060430409_IDUniqueUserIduntity.Designer.cs">
       <DependentUpon>201801060430409_IDUniqueUserIduntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801060523352_defalutLogin.cs" />
+    <Compile Include="Migrations\201801060523352_defalutLogin.Designer.cs">
+      <DependentUpon>201801060523352_defalutLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -509,6 +527,11 @@
     <EmbeddedResource Include="GUI\Reporting\DrugPurchase_Report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DrugPurchase_Report.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reporting\InventryRerport_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InventryRerport_RPT.cs</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Reporting\MontlySalesChart_RPT.rpt">
@@ -564,6 +587,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801060430409_IDUniqueUserIduntity.resx">
       <DependentUpon>201801060430409_IDUniqueUserIduntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801060523352_defalutLogin.resx">
+      <DependentUpon>201801060523352_defalutLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

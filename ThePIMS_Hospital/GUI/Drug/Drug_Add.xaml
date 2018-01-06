@@ -1,10 +1,12 @@
-﻿<Window x:Class="ThePIMS_Hospital.GUI.Drug.Drug_Add"
+﻿<Controls:MetroWindow x:Class="ThePIMS_Hospital.GUI.Drug.Drug_Add"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThePIMS_Hospital.GUI.Drug"
         mc:Ignorable="d"
+                                       xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
         Title="Drug_Add" Height="583.681" Width="980.876" WindowStartupLocation="CenterScreen" MinHeight="503.008" MinWidth="850.376">
     <Grid Margin="10,30,10,30">
 
@@ -60,4 +62,4 @@
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="247,-22,0,0" Name="txtSearch" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" />
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

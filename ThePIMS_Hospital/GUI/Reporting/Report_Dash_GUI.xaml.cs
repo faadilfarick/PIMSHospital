@@ -95,5 +95,11 @@ namespace ThePIMS_Hospital.GUI.Reporting
             DrugPurchaseChart_GUI ui = new DrugPurchaseChart_GUI();
             ui.ShowDialog();
         }
+
+        private void Button_Click_12(object sender, RoutedEventArgs e)
+        {
+            InventryRerport_GUI ui = new InventryRerport_GUI();
+            ui.ShowDialog();
+        }
     }
 }

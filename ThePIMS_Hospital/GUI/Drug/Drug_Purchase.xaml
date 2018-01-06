@@ -1,6 +1,8 @@
-﻿<Window x:Class="ThePIMS_Hospital.GUI.Drug.Drug_Purchase"
+﻿<Controls:MetroWindow x:Class="ThePIMS_Hospital.GUI.Drug.Drug_Purchase"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                       xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
         Title="Drug_Purchase" Height="361.509" Width="492.395" WindowStartupLocation="CenterScreen">
     <Grid Margin="10,30,10,30">
 
@@ -36,4 +38,4 @@
         </StackPanel>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

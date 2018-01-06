@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace ThePIMS_Hospital.GUI.Channel_DOC
     /// <summary>
     /// Interaction logic for AppoinmentCancel.xaml
     /// </summary>
-    public partial class AppoinmentCancel : Window
+    public partial class AppoinmentCancel : MetroWindow
     {
         ApplicationDbContext db = new ApplicationDbContext();
         public AppoinmentCancel()
