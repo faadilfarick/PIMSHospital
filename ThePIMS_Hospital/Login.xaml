@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ThePIMS_Hospital"
         mc:Ignorable="d"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        Title="Login" Height="327" Width="296" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="367.568" Width="296" WindowStartupLocation="CenterScreen">
     <Grid >
         <StackPanel Margin="90,0,100,196" VerticalAlignment="Top"  HorizontalAlignment="Center" >
             <Image  Margin="10" Source="Content/male-shadow-circle-512.png"  ></Image>
@@ -16,6 +16,9 @@
             <TextBox x:Name="txtUsername" Controls:TextBoxHelper.Watermark="User Name" FontSize="15" Controls:TextBoxHelper.ClearTextButton="True" Margin="10"/>
             <PasswordBox x:Name="txtPassword" Controls:TextBoxHelper.Watermark="password" FontSize="15" Controls:TextBoxHelper.ClearTextButton="True"  Margin="10"/>
             <Button x:Name="btnLogin" Content="Login"  HorizontalAlignment="Center" FontSize="12" Margin="96,0,94,0" Width="78" FontWeight="Bold" Click="btnLogin_Click"></Button>
+            <Button x:Name="btnAppoinment" Content="Make appoinment"  HorizontalAlignment="Center" FontSize="12" Margin="10" Width="248" FontWeight="Bold" Click="btnAppoinment_Click"></Button>
+            <Button x:Name="btnRegsterPatient" Content="patient Reg"  HorizontalAlignment="Center" Visibility="Hidden" FontSize="12" Margin="10" Width="248" FontWeight="Bold" Click="btnRegsterPatient_Click"></Button>
+
         </StackPanel>
     </Grid>
 

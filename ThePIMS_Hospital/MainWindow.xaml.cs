@@ -32,6 +32,7 @@ namespace ThePIMS_Hospital
     public partial class MainWindow : MetroWindow
     {
         ApplicationDbContext db = new ApplicationDbContext();
+        string role;
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +41,28 @@ namespace ThePIMS_Hospital
         public MainWindow(string userRole,string userName)
         {
             InitializeComponent();
-            txtuser.Text = "Hello " + userName + "";
+            txtuser.Text = "Hello! " + userName + "";
+            role = userRole;
+            if (userRole == "medicalsuperintendent")
+            {
+                //btnUser.IsEnabled = false;
+            }
+            else if (userRole == "pharmacists")
+            {
+                btnDoc.IsEnabled = false;
+            }
+            else if (userRole == "dispenser")
+            {
+
+            }
+            else if (userRole == "cashier")
+            {
+
+            }
+            else if (userRole == "admin")
+            {
+
+            }
 
         }
 
@@ -106,7 +128,7 @@ namespace ThePIMS_Hospital
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            Report_Dash_GUI rpt = new Report_Dash_GUI();
+            Report_Dash_GUI rpt = new Report_Dash_GUI(role);
             rpt.ShowDialog();
         }
     }

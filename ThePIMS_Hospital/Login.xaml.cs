@@ -14,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ThePIMS_Hospital.DAL;
+using ThePIMS_Hospital.GUI.Cashier;
+using ThePIMS_Hospital.GUI.Channel_DOC;
+using ThePIMS_Hospital.GUI.Patient;
 
 namespace ThePIMS_Hospital
 {
@@ -49,13 +52,35 @@ namespace ThePIMS_Hospital
                 }
                 else
                 {
+                    if (user.role == "cashier")
+                    {
+                        Cashier ca = new Cashier();
+                        this.Close();
+                        ca.ShowDialog();
+                    }
+                    else
+                    {
+                        MainWindow main = new MainWindow(user.role, user.Name);
+                        this.Close();
+                        main.ShowDialog();
+                    }
                     
-                    MainWindow main = new MainWindow(user.role,user.Name);
-                    this.Close();
-                    main.ShowDialog();
+                    
                 }
             }
 
+        }
+
+        private void btnRegsterPatient_Click(object sender, RoutedEventArgs e)
+        {
+            Patient_Reg reg = new Patient_Reg();
+            reg.ShowDialog();
+        }
+
+        private void btnAppoinment_Click(object sender, RoutedEventArgs e)
+        {
+            Channel_Doc doc = new Channel_Doc();
+            doc.ShowDialog();
         }
     }
 }

@@ -20,9 +20,36 @@ namespace ThePIMS_Hospital.GUI.Reporting
     /// </summary>
     public partial class Report_Dash_GUI : MetroWindow
     {
+        string role;
         public Report_Dash_GUI()
         {
             InitializeComponent();
+        }
+        public Report_Dash_GUI(string userRole)
+        {
+            InitializeComponent();
+            role = userRole;
+
+            if (userRole == "medicalsuperintendent")
+            {
+
+            }
+            else if (userRole == "pharmacists")
+            {
+
+            }
+            else if (userRole == "dispenser")
+            {
+
+            }
+            else if (userRole == "cashier")
+            {
+
+            }
+            else if (userRole == "admin")
+            {
+
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

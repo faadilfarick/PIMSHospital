@@ -25,19 +25,19 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Orientation="Vertical" Grid.RowSpan="3" Grid.Row="1">
-            <Button Content="Patient" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click" Grid.Column="1"/>
-            <Button Content="DOC" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_1" Grid.Column="1"/>
-            <Button Content="Channel" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_2" Grid.Column="1"/>
+            <Button x:Name="btnPatient" Content="Patient" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click" Grid.Column="1"/>
+            <Button x:Name="btnDoc" Content="DOC" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_1" Grid.Column="1"/>
+            <Button x:Name="btnChannel" Content="Channel" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_2" Grid.Column="1"/>
             <!--<Button Content="Prescriptions" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_3" Grid.Column="1"/>-->
-            <Button Content="drug" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_4" Grid.Column="1"/>
-            <Button Content="Prescrption" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_5" Grid.Column="1"/>
-            <Button Content="Cashier" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_6" Grid.Column="1"/>
-            <Button Content="User" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_8" Grid.Column="1"/>
-            <Button Content="Report" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_9" Grid.Column="1"/>
+            <Button x:Name="btnDrug" Content="drug" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_4" Grid.Column="1"/>
+            <Button x:Name="btnPriscription" Content="Prescrption" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_5" Grid.Column="1"/>
+            <Button x:Name="btnCashier" Content="Cashier" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_6" Grid.Column="1"/>
+            <Button x:Name="btnUser" Content="User" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_8" Grid.Column="1"/>
+            <Button x:Name="btnReport" Content="Report" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="90" Click="Button_Click_9" Grid.Column="1"/>
 
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="2">
-            <Button Content="Logout" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="69" Click="Button_Click_7" Grid.Column="1" Height="36"/>
+            <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="69" Click="Button_Click_7" Grid.Column="1" Height="36"/>
 
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
@@ -48,7 +48,7 @@
 
         </StackPanel>
         <StackPanel Grid.ColumnSpan="3">
-            <TextBlock HorizontalAlignment="Right" Margin="0,10,0,0" x:Name="txtuser" FontSize="22" Foreground="#FF051580" Text="Hello" FontWeight="Bold" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Right" Margin="0,10,10,0" x:Name="txtuser" FontSize="22" Foreground="#FF051580" Text="Hello" FontWeight="Bold" TextWrapping="Wrap"  VerticalAlignment="Top"/>
 
         </StackPanel>
 
